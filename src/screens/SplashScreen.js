@@ -7,4 +7,4 @@ function SplashScreen() {
   );
 }
 
-export default App;
+export default SplashScreen;
