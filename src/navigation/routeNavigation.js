@@ -1,15 +1,22 @@
 import React from "react";
-import {View, Text} from 'react-native'
 import StackNavigation from "./stackNavigation";
 import DrawerNavigation from "./drawerNavigation";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+const Stack = createNativeStackNavigator();
 
 const RouteNavigation = () => {
-    return(
-        <View>
-            <DrawerNavigation/>
-            <StackNavigation/>
-        </View>
-    )
-}
+  return (
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Stack.Screen name="Main" component={StackNavigation} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
 
-export default RouteNavigation
+export default RouteNavigation;
