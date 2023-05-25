@@ -21,7 +21,7 @@ const CustomInput = ({
         style={styles.input}
         placeholderTextColor="#E4680B"
       />
-      {option ? (
+      {option === 1 ? (
         <Image source={require("../assets/icons/settings.png")} />
       ) : null}
     </View>
