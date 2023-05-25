@@ -22,7 +22,15 @@ const CustomInput = ({
         placeholderTextColor="#E4680B"
       />
       {option === 1 ? (
-        <Image source={require("../assets/icons/settings.png")} />
+        <Image
+          style={{ height: 15, width: 15 }}
+          source={require("../assets/user.png")}
+        />
+      ) : option === 2 ? (
+        <Image
+          style={{ height: 12, width: 20 }}
+          source={require("../assets/eye.png")}
+        />
       ) : null}
     </View>
   );
@@ -32,10 +40,10 @@ export default CustomInput;
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: windowWidth * 0.07,
-    marginVertical: windowHeight * 0.02,
+    marginHorizontal: windowWidth * 0.1,
+    marginVertical: windowHeight * 0.01,
     flexDirection: "row",
-    borderRadius: 10,
+    borderRadius: 5,
     paddingHorizontal: 15,
     backgroundColor: "rgba(255, 255, 255, 0.6)",
     alignItems: "center",
@@ -45,6 +53,6 @@ const styles = StyleSheet.create({
     flex: 1,
     color: "#E4680B",
     fontFamily: "Poppins-Regular",
-    fontSize: 17,
+    fontSize: 16,
   },
 });

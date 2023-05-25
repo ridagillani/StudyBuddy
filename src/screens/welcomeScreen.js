@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({ navigation }) => {
   return (
     <ImageBackground source={require("../assets/cBG.png")} style={{ flex: 1 }}>
       <View
@@ -25,12 +25,14 @@ const WelcomeScreen = () => {
         <Text style={styles.tLine}>Learn Faster, Grow Smarter</Text>
         <Text style={styles.stxt}>Start as</Text>
         <View style={styles.btnsView}>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Main", { screen: "Signin" })}
+          >
             <View style={styles.cbtn}>
               <Text>Child</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("Signin")}>
             <View style={styles.gBtn}>
               <Text style={{ color: "#E4680B" }}>Guardian</Text>
             </View>
