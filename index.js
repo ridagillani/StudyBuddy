@@ -9,4 +9,4 @@ import SplashScreen from "./src/screens/SplashScreen";
 import WelcomeScreen from "./src/screens/welcomeScreen";
 import Signin from "./src/screens/Signin";
 
-AppRegistry.registerComponent(appName, () => Signin);
+AppRegistry.registerComponent(appName, () => App);
