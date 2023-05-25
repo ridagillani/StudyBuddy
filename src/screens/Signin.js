@@ -22,7 +22,10 @@ export default function Signin({ navigation }) {
         style={styles.nav}
         onPress={() => navigation.navigate("Welcome")}
       >
-        <Image style={styles.Icon} source={require("../assets/back.png")} />
+        <Image
+          style={styles.Icon}
+          source={require("../assets/icons/back.png")}
+        />
       </TouchableOpacity>
       <Image style={styles.logo} source={require("../assets/logo.png")} />
       <Text style={styles.welcome}>Welcome!</Text>

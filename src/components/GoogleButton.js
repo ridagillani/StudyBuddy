@@ -32,7 +32,7 @@ const GoogleButton = () => {
       <View style={{ flexDirection: "row", alignItems: "center" }}>
         <Image
           style={styles.logo}
-          source={require("../assets/Google.png")}
+          source={require("../assets/icons/Google.png")}
         ></Image>
         <Text style={styles.txt}>Sign in with Google</Text>
       </View>

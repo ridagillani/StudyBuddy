@@ -24,12 +24,12 @@ const CustomInput = ({
       {option === 1 ? (
         <Image
           style={{ height: 15, width: 15 }}
-          source={require("../assets/user.png")}
+          source={require("../assets/icons/user.png")}
         />
       ) : option === 2 ? (
         <Image
           style={{ height: 12, width: 20 }}
-          source={require("../assets/eye.png")}
+          source={require("../assets/icons/eye.png")}
         />
       ) : null}
     </View>
