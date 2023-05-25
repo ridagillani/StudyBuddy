@@ -1,14 +1,26 @@
+<<<<<<< HEAD
 #Thu May 25 10:20:16 PKT 2023
+=======
+#Thu May 25 09:54:03 PKT 2023
+>>>>>>> 6dac225c29c2a729d7d5e57c231fd79dc603b7ac
 path.4=7/classes.dex
 path.3=14/classes.dex
 path.2=0/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
+<<<<<<< HEAD
 base.4=/Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
 base.3=/Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
 base.2=/Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.1=/Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/android/app/build/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex
 base.0=/Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+=======
+base.4=D\:\\Desktop\\6th Semester\\Mobile app\\Development\\StudyBuddy\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.3=D\:\\Desktop\\6th Semester\\Mobile app\\Development\\StudyBuddy\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.2=D\:\\Desktop\\6th Semester\\Mobile app\\Development\\StudyBuddy\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.1=D\:\\Desktop\\6th Semester\\Mobile app\\Development\\StudyBuddy\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
+base.0=D\:\\Desktop\\6th Semester\\Mobile app\\Development\\StudyBuddy\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+>>>>>>> 6dac225c29c2a729d7d5e57c231fd79dc603b7ac
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex

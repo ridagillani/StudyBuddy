@@ -4,7 +4,11 @@
             "outputFile": "com.studybuddy.app-mergeDebugResources-27:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "/Users/ridagilani/.gradle/caches/transforms-3/2fd73835c5f88322cd819e21091ff8cf/transformed/material-1.1.0/res/values-small-v4/values-small-v4.xml",
+=======
+                    "source": "C:\\Users\\superuser\\.gradle\\caches\\transforms-3\\2fd73835c5f88322cd819e21091ff8cf\\transformed\\material-1.1.0\\res\\values-small-v4\\values-small-v4.xml",
+>>>>>>> 6dac225c29c2a729d7d5e57c231fd79dc603b7ac
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

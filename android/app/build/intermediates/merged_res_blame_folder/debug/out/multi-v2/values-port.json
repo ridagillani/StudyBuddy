@@ -4,7 +4,11 @@
             "outputFile": "com.studybuddy.app-mergeDebugResources-27:/values-port/values-port.xml",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "/Users/ridagilani/.gradle/caches/transforms-3/2869819762abc67901fd58a9b84e0d6d/transformed/appcompat-1.4.1/res/values-port/values-port.xml",
+=======
+                    "source": "C:\\Users\\superuser\\.gradle\\caches\\transforms-3\\2869819762abc67901fd58a9b84e0d6d\\transformed\\appcompat-1.4.1\\res\\values-port\\values-port.xml",
+>>>>>>> 6dac225c29c2a729d7d5e57c231fd79dc603b7ac
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
