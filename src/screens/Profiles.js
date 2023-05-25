@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    marginHorizontal: 30,
+    marginHorizontal: 20,
   },
   header: {
     marginLeft: 70,
@@ -98,4 +98,3 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
 });
-

@@ -11,11 +11,11 @@ import {
 const PopUp = () => {
   return (
     <View>
-      <ImageBackground
+      {/* <ImageBackground
         source={require("../assets/blur.png")}
         resizeMode="cover"
         style={styles.background}
-      ></ImageBackground>
+      ></ImageBackground> */}
     </View>
   );
 };
@@ -59,4 +59,3 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
 });
-

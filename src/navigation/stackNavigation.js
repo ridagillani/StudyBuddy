@@ -29,9 +29,7 @@ const StackNavigation = () => {
       <Stack.Screen name="AddChild" component={AddChild} />
       <Stack.Screen name="EditChild" component={EditChild} />
       <Stack.Screen name="Profiles" component={Profiles} />
-      <Stack.Screen name="ChildProgress" component={ChildProgress} />
       <Stack.Screen name="ChildAdded" component={ChildAdded} />
-
     </Stack.Navigator>
   );
 };
