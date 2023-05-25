@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export default function WelcomeScreen() {
+const WelcomeScreen = () => {
   return (
     <ImageBackground source={require("../assets/cBG.png")} style={{ flex: 1 }}>
       <View
@@ -39,7 +39,9 @@ export default function WelcomeScreen() {
       </View>
     </ImageBackground>
   );
-}
+};
+
+export default WelcomeScreen;
 
 const styles = StyleSheet.create({
   gBtn: {
