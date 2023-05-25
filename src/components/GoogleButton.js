@@ -10,7 +10,7 @@ import {
 
 const windowWidth = Dimensions.get("window").width;
 
-const GoogleButton = () => {
+const GoogleButton = ({ text, onpress }) => {
   const styles = StyleSheet.create({
     Container: {
       flexDirection: "row",
@@ -34,7 +34,7 @@ const GoogleButton = () => {
           style={styles.logo}
           source={require("../assets/icons/Google.png")}
         ></Image>
-        <Text style={styles.txt}>Sign in with Google</Text>
+        <Text style={styles.txt}>{text}</Text>
       </View>
     </TouchableOpacity>
   );

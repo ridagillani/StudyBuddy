@@ -10,6 +10,7 @@ import AddChild from "../screens/AddChild";
 import EditChild from "../screens/EditChild";
 import Profiles from "../screens/Profiles";
 import ChildAdded from "../screens/ChildAdded";
+import Signup from "../screens/Signup";
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +24,7 @@ const StackNavigation = () => {
       <Stack.Screen name="Splash" component={SplashScreen} />
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Stack.Screen name="Signin" component={Signin} />
+      <Stack.Screen name="Signup" component={Signup} />
       <Stack.Screen name="Identify" component={Identify} />
       <Stack.Screen name="ChildProgress" component={ChildProgress} />
       <Stack.Screen name="Settings" component={Settingss} />

@@ -18,7 +18,7 @@ const SmallButton = ({ text, onpress }) => {
       alignItems: "center",
       justifyContent: "center",
       alignSelf: "center",
-      marginTop: 10,
+      marginTop: 20,
     },
   });
 

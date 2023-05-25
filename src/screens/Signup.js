@@ -13,22 +13,24 @@ import ContinueWith from "../components/ContinueWith";
 import GoogleButton from "../components/GoogleButton";
 import SmallButton from "../components/SmallButton";
 
-export default function Signin({ navigation }) {
+export default function Signup({ navigation }) {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [cpass, setCpass] = React.useState("");
+  const [phone, setPhone] = React.useState("");
+
   return (
     <ImageBackground source={require("../assets/bg.png")} style={{ flex: 1 }}>
       <TouchableOpacity
         style={styles.nav}
-        onPress={() => navigation.navigate("Welcome")}
+        onPress={() => navigation.navigate("Signin")}
       >
         <Image
           style={styles.Icon}
           source={require("../assets/icons/back.png")}
         />
       </TouchableOpacity>
-      <Image style={styles.logo} source={require("../assets/logo.png")} />
-      <Text style={styles.welcome}>Welcome!</Text>
+      <Text style={styles.welcome}>Sign up</Text>
 
       <CustomInput
         value={username}
@@ -37,28 +39,40 @@ export default function Signin({ navigation }) {
         option={1}
       />
       <CustomInput
+        value={phone}
+        onChangeText={setPhone}
+        placeholder={"Phone no."}
+        option={3}
+      />
+      <CustomInput
         value={password}
         onChangeText={setPassword}
         placeholder={"Password"}
         option={2}
         secureTextEntry
       />
-      <TouchableOpacity style={styles.container}>
-        <Text style={styles.label}>Forgot Password?</Text>
-      </TouchableOpacity>
+      <CustomInput
+        value={cpass}
+        onChangeText={setCpass}
+        placeholder={"Confirm Password"}
+        option={2}
+        secureTextEntry
+      />
+
       <SmallButton
-        text={"Sign in"}
+        text={"Sign up"}
         onpress={() => navigation.navigate("Welcome")}
       />
       <ContinueWith />
-      <GoogleButton text={"Sign in with Google"} />
+      <GoogleButton text={"Sign up with Google"} />
       <Text style={styles.label2}>
-        Don't Have an account?
+        Have an account?
         <Text
-          onPress={() => navigation.navigate("Signup")}
-          style={styles.signup}
+          onPress={() => navigation.navigate("Signin")}
+          style={styles.signin}
         >
-          Sign up
+          {" "}
+          Sign in
         </Text>{" "}
         now
       </Text>
@@ -86,8 +100,8 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     color: "#E4680B",
     textAlign: "center",
-    marginBottom: 20,
-    marginTop: 10,
+    marginBottom: 30,
+    marginTop: 60,
   },
 
   container: {
@@ -106,7 +120,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 
-  signup: {
+  signin: {
     fontWeight: "bold",
     textDecorationLine: "underline",
   },
