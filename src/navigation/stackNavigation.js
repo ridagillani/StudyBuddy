@@ -24,11 +24,11 @@ const StackNavigation = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="Home" component={Home} />
-      {/* <Stack.Screen name="Splash" component={SplashScreen} />
+      <Stack.Screen name="Splash" component={SplashScreen} />
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Stack.Screen name="Signin" component={Signin} />
       <Stack.Screen name="Signup" component={Signup} />
+      <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Identify" component={Identify} />
       <Stack.Screen name="Result" component={Result} />
       <Stack.Screen name="Match" component={Match} />
@@ -37,7 +37,7 @@ const StackNavigation = () => {
       <Stack.Screen name="AddChild" component={AddChild} />
       <Stack.Screen name="EditChild" component={EditChild} />
       <Stack.Screen name="Profiles" component={Profiles} />
-      <Stack.Screen name="ChildAdded" component={ChildAdded} /> */}
+      <Stack.Screen name="ChildAdded" component={ChildAdded} />
     </Stack.Navigator>
   );
 };

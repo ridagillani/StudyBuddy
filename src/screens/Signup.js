@@ -61,7 +61,7 @@ export default function Signup({ navigation }) {
 
       <SmallButton
         text={"Sign up"}
-        onpress={() => navigation.navigate("Welcome")}
+        onpress={() => navigation.navigate("Signin")}
       />
       <ContinueWith />
       <GoogleButton text={"Sign up with Google"} />

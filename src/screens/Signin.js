@@ -48,7 +48,7 @@ export default function Signin({ navigation }) {
       </TouchableOpacity>
       <SmallButton
         text={"Sign in"}
-        onpress={() => navigation.navigate("Welcome")}
+        onpress={() => navigation.navigate("Home")}
       />
       <ContinueWith />
       <GoogleButton text={"Sign in with Google"} />

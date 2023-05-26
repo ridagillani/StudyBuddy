@@ -1,18 +1,16 @@
 import React from "react";
-import OrangeCards from "../components/OrangeCard";
 import {
   ImageBackground,
   StyleSheet,
   Text,
-  Touchable,
-  TouchableOpacity,
   View,
   Image,
-  FlatList,
-  Pressable,
+  TouchableOpacity,
   ScrollView,
+  Pressable,
 } from "react-native";
-import Days from "../components/Days";
+
+import Categories from "../components/Categories";
 
 const Home = () => {
   console;
@@ -23,28 +21,37 @@ const Home = () => {
         resizeMode="cover"
         style={styles.background}
       >
-        <View style={{ flexDirection: "row" }}>
-          <View style={{ flexDirection: "column" }}>
+        <View style={styles.iconsCont}>
+          <TouchableOpacity>
             <Image
-              source={require("../assets/logo.png")}
-              style={{
-                height: 100,
-                width: 140,
-                marginTop: 70,
-              }}
+              style={styles.icon}
+              source={require("../assets/icons/Menu-right.png")}
             />
-            <Text>Categories</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image
+              style={styles.icon}
+              source={require("../assets/icons/Notification-red.png")}
+            />
+          </TouchableOpacity>
+        </View>
+        <View style={styles.container}>
+          <View style={styles.logonhead}>
+            <Image source={require("../assets/logo.png")} style={styles.logo} />
+            <Text style={styles.heading}>Categories</Text>
           </View>
 
           <Image
             source={require("../assets/charac3.png")}
-            style={{
-              height: 100,
-              width: 140,
-              marginTop: 70,
-            }}
+            style={styles.charac}
           />
         </View>
+
+        <ScrollView>
+          <Categories text1={"Birds"} pic1={1} text2={"Animals"} pic2={2} />
+          <Categories text1={"Flowers"} pic1={3} text2={"Fruits"} pic2={4} />
+          <Categories text1={"Vegetables"} pic1={5} text2={"Maths"} pic2={6} />
+        </ScrollView>
       </ImageBackground>
     </View>
   );
@@ -56,5 +63,41 @@ const styles = StyleSheet.create({
   background: {
     height: "100%",
     width: "100%",
+  },
+  logo: {
+    height: 90,
+    width: 140,
+    marginLeft: 10,
+  },
+  heading: {
+    fontSize: 28,
+    fontFamily: "Poppins-Medium",
+    color: "white",
+  },
+  charac: {
+    height: 160,
+    width: 180,
+    marginRight: 20,
+    marginTop: 10,
+  },
+  icon: {
+    height: 40,
+    width: 40,
+    paddingRight: 20,
+  },
+  container: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  logonhead: {
+    flexDirection: "column",
+    marginLeft: 20,
+    justifyContent: "space-between",
+  },
+
+  iconsCont: {
+    flexDirection: "row-reverse",
+    marginTop: 20,
+    marginLeft: 10,
   },
 });
