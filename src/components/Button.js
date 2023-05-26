@@ -13,17 +13,17 @@ const CustomButton = ({
   const styles = StyleSheet.create({
     container: {
       backgroundColor: "#E4680B",
-      paddingVertical: paddingVertical ? paddingVertical : windowHeight * 0.004,
+      paddingVertical: paddingVertical ? paddingVertical : windowHeight * 0.01,
       paddingHorizontal: paddingHorizontal
         ? paddingHorizontal
         : windowWidth * 0.07,
-      borderRadius: windowWidth * 0.03,
+      borderRadius: windowWidth * 0.015,
       alignSelf: "center",
       alignItems: "center",
     },
     text: {
       color: "#FFF6DE",
-      fontSize: windowWidth * 0.053,
+      fontSize: windowWidth * 0.045,
       fontFamily: "Poppins-Regular",
     },
   });

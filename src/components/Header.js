@@ -12,11 +12,11 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-const Header = () => {
+const Header = ({ color }) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={() => {}}>
-        <Icon name="arrow-back-ios" size={30} color="#E4680B" />
+        <Icon name="arrow-back-ios" size={30} color={color} />
       </TouchableOpacity>
 
       <View style={styles.row}>

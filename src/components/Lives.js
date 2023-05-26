@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#FFF6DE",
-    fontSize: windowWidth * 0.053,
+    fontSize: windowWidth * 0.045,
     fontFamily: "Poppins-Regular",
   },
   image: {

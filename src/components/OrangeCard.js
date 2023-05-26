@@ -11,12 +11,12 @@ import {
   Pressable,
   ScrollView,
 } from "react-native";
-const OrangeCards = ({ score }) => {
+const OrangeCards = ({ score, text }) => {
   return (
     <View style={styles.orangeCards}>
       <Text style={{ color: "#FFEEC2", fontSize: 45 }}>{score}</Text>
       <Text style={{ color: "#FFEEC2", fontSize: 12, textAlign: "center" }}>
-        Highest{"\n"}Score
+        {text? text: 'Highest\nScore'}
       </Text>
     </View>
   );

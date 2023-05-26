@@ -12,6 +12,8 @@ import Profiles from "../screens/Profiles";
 import ChildAdded from "../screens/ChildAdded";
 import Signup from "../screens/Signup";
 import Home from "../screens/Home";
+import Match from "../screens/Match";
+import Result from "../screens/Result";
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +30,8 @@ const StackNavigation = () => {
       <Stack.Screen name="Signin" component={Signin} />
       <Stack.Screen name="Signup" component={Signup} />
       <Stack.Screen name="Identify" component={Identify} />
+      <Stack.Screen name="Result" component={Result} />
+      <Stack.Screen name="Match" component={Match} />
       <Stack.Screen name="ChildProgress" component={ChildProgress} />
       <Stack.Screen name="Settings" component={Settingss} />
       <Stack.Screen name="AddChild" component={AddChild} />

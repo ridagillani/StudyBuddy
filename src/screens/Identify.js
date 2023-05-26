@@ -24,14 +24,12 @@ const Identify = () => {
     <ImageBackground
       source={require("../assets/Background.png")}
       style={styles.container}>
-      <Header />
+      <Header color={"#E4680B"} />
 
       <ScrollView>
         <Text style={styles.text}>Birds</Text>
 
-        <View style={styles.subContainer}>
-          <CustomButton text={`Score:  ${2}`} />
-        </View>
+        <CustomButton text={`Score:  ${2}`} />
 
         <Text style={styles.question}>
           Q. Identify the Bird and Write it’s spellings.
@@ -84,10 +82,9 @@ const styles = StyleSheet.create({
     fontSize: 36,
     alignSelf: "center",
   },
-  subContainer: {},
   question: {
     color: "#E4680B",
-    fontSize: windowWidth * 0.05,
+    fontSize: windowWidth * 0.045,
     marginHorizontal: windowWidth * 0.06,
     textAlign: "justify",
     marginTop: windowHeight * 0.02,
@@ -117,5 +114,6 @@ const styles = StyleSheet.create({
   },
   submit: {
     marginTop: windowHeight * 0.07,
+    marginBottom: windowHeight * 0.03,
   },
 });
