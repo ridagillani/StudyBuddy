@@ -13,7 +13,7 @@ import {
   ScrollView,
 } from "react-native";
 
-const ChildProgress = () => {
+const ChildProgress = ({ navigation }) => {
   const [currentDay, setCurrentDay] = React.useState(1);
   console;
   return (

@@ -10,7 +10,7 @@ import {
 import CustomInput from "../components/CustomInput";
 import SmallButton from "../components/SmallButton";
 
-const AddChild = () => {
+const AddChild = ({ navigation }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setcPass] = useState("");
@@ -24,16 +24,18 @@ const AddChild = () => {
         style={{
           flexDirection: "row",
           alignItems: "center",
-          marginTop: 15,
+          margin: 15,
+          justifyContent: "space-between",
         }}
       >
         <TouchableOpacity>
           <Image
-            style={{ width: 20, height: 20, margin: 20 }}
+            style={{ width: 20, height: 20 }}
             source={require("../assets/back.png")}
           />
         </TouchableOpacity>
         <Text style={styles.header}>Add Child</Text>
+        <View style={{ width: 20 }}></View>
       </View>
       <View style={styles.portion}>
         <Text style={styles.cp}>Sign Up</Text>
@@ -55,7 +57,10 @@ const AddChild = () => {
           placeholder={"Confirm Password"}
           option={2}
         />
-        <SmallButton text={"Submit"} />
+        <SmallButton
+          onPress={() => navigation.navigate("ChildProgress")}
+          text={"Submit"}
+        />
       </View>
     </ImageBackground>
   );
@@ -73,7 +78,6 @@ const styles = StyleSheet.create({
   },
 
   header: {
-    marginLeft: 70,
     marginTop: 10,
     fontFamily: "Poppins-Medium",
     color: "#E4680B",

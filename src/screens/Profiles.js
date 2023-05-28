@@ -22,16 +22,18 @@ const Profiles = ({ navigation }) => {
           style={{
             flexDirection: "row",
             alignItems: "center",
-            marginTop: 15,
+            margin: 15,
+            justifyContent: "space-between",
           }}
         >
           <TouchableOpacity>
             <Image
-              style={{ width: 20, height: 20, margin: 20 }}
+              style={{ width: 20, height: 20 }}
               source={require("../assets/back.png")}
             />
           </TouchableOpacity>
           <Text style={styles.header}>Profiles</Text>
+          <View style={{ width: 20 }}></View>
         </View>
         <View style={styles.headings}>
           <Text style={styles.cp}>Child Profiles</Text>
@@ -91,7 +93,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   header: {
-    marginLeft: 70,
     marginTop: 10,
     fontFamily: "Poppins-Medium",
     color: "#E4680B",

@@ -25,16 +25,18 @@ const Settingss = () => {
         style={{
           flexDirection: "row",
           alignItems: "center",
-          marginTop: 15,
+          margin: 15,
+          justifyContent: "space-between",
         }}
       >
         <TouchableOpacity>
           <Image
-            style={{ width: 20, height: 20, margin: 20 }}
+            style={{ width: 20, height: 20 }}
             source={require("../assets/back.png")}
           />
         </TouchableOpacity>
         <Text style={styles.header}>Settings</Text>
+        <View style={{ width: 20 }}></View>
       </View>
       <View style={styles.portion}>
         <Image source={require("../assets/user.png")} style={styles.picture} />
@@ -92,7 +94,6 @@ const styles = StyleSheet.create({
     marginRight: 100,
   },
   header: {
-    marginLeft: 70,
     marginTop: 10,
     fontFamily: "Poppins-Medium",
     color: "#E4680B",
