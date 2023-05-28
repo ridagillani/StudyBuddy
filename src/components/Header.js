@@ -12,16 +12,20 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-const Header = ({ color }) => {
+const Header = ({ color, navigation }) => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => {}}>
+      <TouchableOpacity onPress={() => navigation.goBack()}>
         <Icon name="arrow-back-ios" size={30} color={color} />
       </TouchableOpacity>
 
       <View style={styles.row}>
         <View style={{ marginRight: windowWidth * 0.02 }}>
-          <TouchableOpacity onPress={() => {}} style={styles.counter}>
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate("Main", { screen: "Notifications" })
+            }
+            style={styles.counter}>
             <Image
               source={require("../assets/icons/notification_icon.png")}
               style={styles.image}

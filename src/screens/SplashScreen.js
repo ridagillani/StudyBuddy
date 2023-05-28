@@ -4,15 +4,14 @@ import { ImageBackground, View, Text, Image } from "react-native";
 export default function SplashScreen({ navigation }) {
   React.useEffect(() => {
     setTimeout(() => {
-      navigation.navigate("Main", { screen: "Welcome" });
+      navigation.replace("Main", { screen: "Welcome" });
     }, 2000);
   }, []);
 
   return (
     <ImageBackground
       source={require("../assets/bg.png")}
-      style={{ flex: 1, flexDirection: "column-reverse" }}
-    >
+      style={{ flex: 1, flexDirection: "column-reverse" }}>
       <Image
         source={require("../assets/charac1.png")}
         style={{

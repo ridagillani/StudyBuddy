@@ -1,12 +1,13 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+const Drawer = createDrawerNavigator();
 
 const DrawerNavigation = () => {
   return (
-    <View>
-      <Text>Stack</Text>
-    </View>
+    <Drawer.Navigator>
+      {/* <Drawer.Screen name="Home" component={HomeScreen} />
+      <Drawer.Screen name="Notifications" component={NotificationsScreen} /> */}
+    </Drawer.Navigator>
   );
 };
-
 export default DrawerNavigation;
