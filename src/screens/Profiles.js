@@ -1,18 +1,16 @@
 import React from "react";
+
 import {
   ImageBackground,
   StyleSheet,
   Text,
-  Touchable,
   TouchableOpacity,
   View,
   Image,
-  FlatList,
-  Pressable,
   ScrollView,
 } from "react-native";
 import ProfileCard from "../components/ProfileCard";
-const Profiles = () => {
+const Profiles = ({ navigation }) => {
   return (
     <View>
       <ImageBackground
@@ -37,7 +35,10 @@ const Profiles = () => {
         </View>
         <View style={styles.headings}>
           <Text style={styles.cp}>Child Profiles</Text>
-          <TouchableOpacity style={styles.add}>
+          <TouchableOpacity
+            style={styles.add}
+            onPress={() => navigation.navigate("AddChild")}
+          >
             <Text style={styles.but}>+ Add</Text>
           </TouchableOpacity>
         </View>

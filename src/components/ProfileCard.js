@@ -1,19 +1,7 @@
 import React from "react";
-import {
-  ImageBackground,
-  StyleSheet,
-  Text,
-  Touchable,
-  TouchableOpacity,
-  View,
-  Image,
-  FlatList,
-  Pressable,
-  ScrollView,
-} from "react-native";
-import { TextInput } from "react-native-paper";
+import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 
-const ProfileCard = ({ name, password }) => {
+const ProfileCard = ({ name, password, navigation }) => {
   return (
     <View style={styles.card}>
       <View style={styles.buttonssV}>
@@ -24,6 +12,7 @@ const ProfileCard = ({ name, password }) => {
             <Image
               source={require("../assets/edit.png")}
               style={styles.buttonss}
+              onPress={() => navigation.navigate("EditChild")}
             />
           </TouchableOpacity>
           <TouchableOpacity>

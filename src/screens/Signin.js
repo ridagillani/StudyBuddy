@@ -1,12 +1,10 @@
 import React from "react";
 import {
   ImageBackground,
-  View,
   Text,
   Image,
   StyleSheet,
   TouchableOpacity,
-  TextInput,
 } from "react-native";
 import CustomInput from "../components/CustomInput";
 import ContinueWith from "../components/ContinueWith";

@@ -25,6 +25,7 @@ const StackNavigation = () => {
         headerShown: false,
       }}
     >
+      <Stack.Screen name="Profiles" component={Profiles} />
       <Stack.Screen name="Splash" component={SplashScreen} />
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Stack.Screen name="Signin" component={Signin} />
@@ -38,7 +39,6 @@ const StackNavigation = () => {
       <Stack.Screen name="Settings" component={Settingss} />
       <Stack.Screen name="AddChild" component={AddChild} />
       <Stack.Screen name="EditChild" component={EditChild} />
-      <Stack.Screen name="Profiles" component={Profiles} />
       <Stack.Screen name="ChildAdded" component={ChildAdded} />
     </Stack.Navigator>
   );

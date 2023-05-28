@@ -36,6 +36,11 @@ const CustomInput = ({
           style={{ height: 15, width: 15 }}
           source={require("../assets/icons/phone.png")}
         />
+      ) : option === 4 ? (
+        <Image
+          style={{ height: 16, width: 20 }}
+          source={require("../assets/email.png")}
+        />
       ) : null}
     </View>
   );
