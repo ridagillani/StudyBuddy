@@ -13,14 +13,13 @@ import Header from "../components/Header";
 import CustomButton from "../components/Button";
 import CustomInput from "../components/CustomInput";
 import Lives from "../components/Lives";
-// import Sound from "react-native-sound";
+import McqParts from "../components/McqsParts";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-const Identify = ({ navigation }) => {
-  const [input, setInput] = React.useState("");
-  // const sound = new Sound("../assets/sound/eagle.mp3");
+const MCQ = ({ navigation }) => {
+  const [current, setCurrent] = React.useState(false);
 
   return (
     <ImageBackground
@@ -33,37 +32,54 @@ const Identify = ({ navigation }) => {
 
         <CustomButton text={`Score:  ${2}`} />
 
-        <Text style={styles.question}>
-          Q1. Identify the Bird and Write it’s spellings.
-        </Text>
-        {/* sound.play() */}
-        <TouchableOpacity style={styles.hint} onPress={() => {}}>
-          <Image
-            source={require("../assets/icons/speaker.png")}
-            style={styles.image}
-          />
-          <Text style={styles.hintText}>Hint</Text>
-        </TouchableOpacity>
-
         <Image
-          source={require("../assets/Eagle.png")}
-          resizeMode="contain"
+          source={require("../assets/pigeon2.png")}
           style={styles.birdImage}
         />
 
         <CustomButton text={<Lives />} />
 
-        <CustomInput
-          value={input}
-          onChangeText={setInput}
-          placeholder={"Name"}
-        />
+        <Text style={styles.question}>
+          Q3. What’s the name of the bird in this picture?
+        </Text>
+
+        <View style={styles.center}>
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-between" }}>
+            <McqParts
+              text={"Eagle"}
+              current={current === 1 ? true : false}
+              onPress={() => setCurrent(1)}
+            />
+            <McqParts
+              text={"Crow"}
+              option
+              current={current === 2 ? true : false}
+              onPress={() => setCurrent(2)}
+            />
+          </View>
+
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-between" }}>
+            <McqParts
+              text={"Pigeon"}
+              current={current === 3 ? true : false}
+              onPress={() => setCurrent(3)}
+            />
+            <McqParts
+              text={"Sparrow"}
+              option
+              current={current === 4 ? true : false}
+              onPress={() => setCurrent(4)}
+            />
+          </View>
+        </View>
 
         <View style={styles.submit}>
           <CustomButton
             text={"Submit"}
             paddingHorizontal={windowWidth * 0.3}
-            onPress={() => navigation.navigate("Match")}
+            onPress={() => navigation.navigate("GameOver")}
           />
         </View>
       </ScrollView>
@@ -71,7 +87,7 @@ const Identify = ({ navigation }) => {
   );
 };
 
-export default Identify;
+export default MCQ;
 
 const styles = StyleSheet.create({
   container: {
@@ -112,10 +128,15 @@ const styles = StyleSheet.create({
     height: windowHeight * 0.33,
     width: windowWidth * 0.78,
     alignSelf: "center",
-    marginVertical: windowHeight * 0.005,
+    marginVertical: windowHeight * 0.02,
   },
   submit: {
-    marginTop: windowHeight * 0.07,
+    marginTop: windowHeight * 0.02,
     marginBottom: windowHeight * 0.03,
+  },
+  center: {
+    marginHorizontal: windowWidth * 0.09,
+    marginRight: windowWidth * 0.2,
+    marginVertical: windowHeight * 0.02,
   },
 });

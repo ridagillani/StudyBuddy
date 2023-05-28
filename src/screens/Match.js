@@ -18,12 +18,12 @@ import { matchData } from "../model/MatchData";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-const Match = () => {
+const Match = ({ navigation }) => {
   return (
     <ImageBackground
       source={require("../assets/Background.png")}
       style={styles.container}>
-      <Header color={"#E4680B"}/>
+      <Header color={"#E4680B"} navigation={navigation}/>
 
       <ScrollView>
         <Text style={styles.text}>Birds</Text>
@@ -33,7 +33,7 @@ const Match = () => {
         </Text>
         <View>
           {matchData.map((item) => (
-            <MatchItem uri={item.uri} text={item.name} />
+            <MatchItem uri={item.uri} text={item.name} key={item.id} />
           ))}
         </View>
         <CustomButton text={<Lives />} />
@@ -42,7 +42,7 @@ const Match = () => {
           <CustomButton
             text={"Submit"}
             paddingHorizontal={windowWidth * 0.3}
-            onPress={() => {}}
+            onPress={() => navigation.navigate("MCQ")}
           />
         </View>
       </ScrollView>

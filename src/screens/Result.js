@@ -16,7 +16,7 @@ import ResultButton from "../components/ResultButton";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-const Result = () => {
+const Result = ({ navigation }) => {
   return (
     <ImageBackground
       source={require("../assets/bg.png")}
@@ -37,12 +37,21 @@ const Result = () => {
       </View>
 
       <View style={[styles.card, { marginHorizontal: 15 }]}>
-        <ResultButton uri={require("../assets/icons/home.png")} text={"Home"} />
+        <ResultButton
+          uri={require("../assets/icons/home.png")}
+          text={"Home"}
+          onPress={() => navigation.replace("Main", { screen: "Home" })}
+        />
         <ResultButton
           uri={require("../assets/icons/retry.png")}
           text={"Retry"}
         />
-        <ResultButton uri={require("../assets/icons/menu.png")} text={"Menu"} />
+        <ResultButton
+          uri={require("../assets/icons/menu.png")}
+          text={"Answers"}
+          answer
+          onPress={() => navigation.navigate("Answers")}
+        />
       </View>
     </ImageBackground>
   );
