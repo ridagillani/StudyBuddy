@@ -8,11 +8,10 @@ const ProfileCard = ({ name, password, navigation }) => {
         <Text style={styles.name}>{name}</Text>
 
         <View style={{ flexDirection: "row" }}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("EditChild")}>
             <Image
               source={require("../assets/edit.png")}
               style={styles.buttonss}
-              onPress={() => navigation.navigate("EditChild")}
             />
           </TouchableOpacity>
           <TouchableOpacity>

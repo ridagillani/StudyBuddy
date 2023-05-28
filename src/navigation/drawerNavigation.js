@@ -1,12 +1,12 @@
 import React from "react";
-import {View, Text} from 'react-native'
+import { View, Text } from "react-native";
 
 const DrawerNavigation = () => {
-    return(
-        <View>
-            <Text>Stack</Text>
-        </View>
-    )
-}
+  return (
+    <View>
+      <Text>Stack</Text>
+    </View>
+  );
+};
 
-export default DrawerNavigation
+export default DrawerNavigation;

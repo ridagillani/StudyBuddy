@@ -10,7 +10,7 @@ import {
   Image,
 } from "react-native";
 
-const EditChild = () => {
+const EditChild = ({ navigation }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setcPass] = useState("");

@@ -16,6 +16,7 @@ import Match from "../screens/Match";
 import Result from "../screens/Result";
 import Notifications from "../screens/Notifications";
 import Leaderboard from "../screens/Leaderboard";
+import MenuParent from "../components/MenuParent";
 
 const Stack = createNativeStackNavigator();
 
@@ -26,7 +27,7 @@ const StackNavigation = () => {
         headerShown: false,
       }}
     >
-      {/* <Stack.Screen name="Leaderboard" component={Leaderboard} /> */}
+      <Stack.Screen name="Leaderboard" component={Leaderboard} />
       <Stack.Screen name="Profiles" component={Profiles} />
       <Stack.Screen name="Splash" component={SplashScreen} />
       <Stack.Screen name="Welcome" component={WelcomeScreen} />

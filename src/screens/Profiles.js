@@ -26,10 +26,13 @@ const Profiles = ({ navigation }) => {
             justifyContent: "space-between",
           }}
         >
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("ChildProgress")}
+          >
             <Image
               style={{ width: 20, height: 20 }}
               source={require("../assets/back.png")}
+              onpress={() => navigation.navigate("Home")}
             />
           </TouchableOpacity>
           <Text style={styles.header}>Profiles</Text>
