@@ -1,18 +1,17 @@
 import React from "react";
 import OrangeCards from "../components/OrangeCard";
+import Attempts from "../components/Attempts";
+import Days from "../components/Days";
+
 import {
   ImageBackground,
   StyleSheet,
   Text,
-  Touchable,
   TouchableOpacity,
   View,
   Image,
-  FlatList,
-  Pressable,
   ScrollView,
 } from "react-native";
-import Days from "../components/Days";
 
 const ChildProgress = () => {
   const [currentDay, setCurrentDay] = React.useState(1);
@@ -26,7 +25,7 @@ const ChildProgress = () => {
       >
         <TouchableOpacity
           style={{
-            height: "5%",
+            height: "4%",
             paddingTop: 15,
             paddingLeft: 15,
           }}
@@ -41,13 +40,14 @@ const ChildProgress = () => {
             flexDirection: "row",
             justifyContent: "space-evenly",
             alignItems: "center",
-            marginLeft: 25,
-            marginBottom: 45,
+            marginLeft: 35,
+            marginRight: 15,
+            marginBottom: 35,
           }}
         >
           <Text style={styles.heading}>Progress{"\n"}Record</Text>
           <Image
-            style={{ height: 220, width: 200 }}
+            style={{ height: 200, width: 180 }}
             source={require("../assets/illlustrationcp.png")}
           />
         </View>
@@ -91,57 +91,9 @@ const ChildProgress = () => {
           </View>
 
           <Text style={styles.texts}>Record</Text>
-          <View
-            style={{
-              backgroundColor: "#FFF1CD",
-              borderRadius: 20,
-              marginHorizontal: 15,
-            }}
-          >
-            <View
-              style={{
-                flexDirection: "row",
-                justifyContent: "space-between",
-                alignItems: "center",
-                marginHorizontal: 25,
-              }}
-            >
-              <Text style={{ color: "#E4680B", fontSize: 20, padding: 10 }}>
-                Attempt 1
-              </Text>
-              <Pressable
-                style={{
-                  backgroundColor: "#E4680B",
-                  width: 70,
-                  height: 25,
-                  borderRadius: 20,
-                  justifyContent: "center",
-                }}
-              >
-                <Text
-                  style={{
-                    color: "#FFEEC2",
-                    fontSize: 10,
-                    textAlign: "center",
-                  }}
-                >
-                  MCQ's
-                </Text>
-              </Pressable>
-            </View>
-            <View
-              style={{
-                flexDirection: "row",
-                justifyContent: "space-between",
-                marginVertical: 15,
-                marginHorizontal: 20,
-              }}
-            >
-              <OrangeCards score={15} />
-              <OrangeCards score={15} />
-              <OrangeCards score={15} />
-            </View>
-          </View>
+          <Attempts game={"Match"} number={1} />
+          <Attempts game={"MCQ's"} number={2} />
+          <Attempts game={"Identify"} number={3} />
         </ScrollView>
       </ImageBackground>
     </View>

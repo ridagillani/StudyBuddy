@@ -1,69 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
+import CustomInput from "../components/CustomInput";
+import SmallButton from "../components/SmallButton";
 import {
   ImageBackground,
   StyleSheet,
   Text,
-  Touchable,
   TouchableOpacity,
   View,
   Image,
 } from "react-native";
+
 const EditChild = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [cpassword, setcPass] = useState("");
+
   return (
-    <View>
-      <ImageBackground
-        source={require("../assets/backskin.png")}
-        resizeMode="cover"
-        style={styles.background}
+    <ImageBackground
+      source={require("../assets/backskin.png")}
+      resizeMode="cover"
+      style={styles.background}
+    >
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          marginTop: 15,
+        }}
       >
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            marginTop: 15,
-          }}
-        >
-          <TouchableOpacity>
-            <Image
-              style={{ width: 20, height: 20, margin: 20 }}
-              source={require("../assets/back.png")}
-            />
-          </TouchableOpacity>
-          <Text style={styles.header}>Edit Child</Text>
-        </View>
-      </ImageBackground>
-    </View>
+        <TouchableOpacity>
+          <Image
+            style={{ width: 20, height: 20, margin: 20 }}
+            source={require("../assets/back.png")}
+          />
+        </TouchableOpacity>
+        <Text style={styles.header}>Edit Child</Text>
+      </View>
+      <View style={styles.portion}>
+        <CustomInput
+          value={username}
+          onChangeText={setUsername}
+          placeholder={"Username"}
+          option={1}
+        />
+        <CustomInput
+          value={password}
+          onChangeText={setPassword}
+          placeholder={"Password"}
+          option={2}
+        />
+        <CustomInput
+          value={cpassword}
+          onChangeText={setcPass}
+          placeholder={"Confirm Password"}
+          option={2}
+        />
+        <SmallButton text={"Submit"} />
+      </View>
+    </ImageBackground>
   );
 };
 export default EditChild;
 const styles = StyleSheet.create({
   background: {
-    height: "100%",
-    width: "100%",
-  },
-  add: {
-    backgroundColor: "#E4680B",
-    padding: 10,
-    borderRadius: 50,
-    justifyContent: "center",
-  },
-  but: {
-    color: "#FFEEC2",
-    textAlign: "center",
-    paddingHorizontal: 20,
-  },
-  cp: {
-    fontFamily: "Poppins-Regular",
-    color: "#E4680B",
-    fontSize: 22,
-    marginRight: 100,
-  },
-  headings: {
-    marginVertical: 5,
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    marginHorizontal: 30,
+    flex: 1,
   },
   header: {
     marginLeft: 70,
@@ -73,5 +73,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 30,
   },
+  portion: {
+    marginTop: 20,
+  },
 });
-
