@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
-const PopUp = () => {
+const PopUp = ({ illustration, message, sub }) => {
   return (
     <View style={{ justifyContent: "center", flex: 1 }}>
       <View style={styles.card}>
@@ -13,12 +13,28 @@ const PopUp = () => {
             marginTop: 35,
           }}
         >
-          <Text style={styles.header}>Child Added</Text>
-          <Text style={styles.subH}>Learn Faster, Grow Smarter!</Text>
-          <Image
+          <Text style={styles.header}>{message}</Text>
+          <Text style={styles.subH}>{sub}</Text>
+          {/* <Image
             source={require("../assets/addedchar.png")}
             style={styles.char}
-          />
+          /> */}
+          {illustration === 1 ? (
+            <Image
+              style={styles.char}
+              source={require("../assets/addedchar.png")}
+            />
+          ) : illustration === 2 ? (
+            <Image
+              style={styles.char}
+              source={require("../assets/highchar.png")}
+            />
+          ) : illustration === 3 ? (
+            <Image
+              style={styles.char}
+              source={require("../assets/wrongchar.png")}
+            />
+          ) : null}
         </View>
       </View>
     </View>

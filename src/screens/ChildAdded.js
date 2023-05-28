@@ -18,7 +18,11 @@ const ChildAdded = () => {
         resizeMode="cover"
         style={styles.background}
       >
-        <PopUp></PopUp>
+        <PopUp
+          illustration={1}
+          message={"Child Added"}
+          sub={"Learn Faster, Grow Smarter!"}
+        ></PopUp>
       </ImageBackground>
     </View>
   );
@@ -63,4 +67,3 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
 });
-
