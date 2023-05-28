@@ -26,7 +26,7 @@ const StackNavigation = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="Leaderboard" component={Leaderboard} />
+      {/* <Stack.Screen name="Leaderboard" component={Leaderboard} /> */}
       <Stack.Screen name="Profiles" component={Profiles} />
       <Stack.Screen name="Splash" component={SplashScreen} />
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
