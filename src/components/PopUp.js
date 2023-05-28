@@ -1,61 +1,61 @@
 import React from "react";
-import {
-  ImageBackground,
-  StyleSheet,
-  Text,
-  Touchable,
-  TouchableOpacity,
-  View,
-  Image,
-} from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 const PopUp = () => {
   return (
-    <View>
-      {/* <ImageBackground
-        source={require("../assets/blur.png")}
-        resizeMode="cover"
-        style={styles.background}
-      ></ImageBackground> */}
+    <View style={{ justifyContent: "center", flex: 1 }}>
+      <View style={styles.card}>
+        <Image source={require("../assets/cross.png")} style={styles.cross} />
+        <View
+          style={{
+            alignItems: "center",
+            alignSelf: "center",
+            justifyContent: "center",
+            marginTop: 35,
+          }}
+        >
+          <Text style={styles.header}>Child Added</Text>
+          <Text style={styles.subH}>Learn Faster, Grow Smarter!</Text>
+          <Image
+            source={require("../assets/addedchar.png")}
+            style={styles.char}
+          />
+        </View>
+      </View>
     </View>
   );
 };
 export default PopUp;
 
 const styles = StyleSheet.create({
-  background: {
-    height: "100%",
-    width: "100%",
+  card: {
+    backgroundColor: "#FFF6DE",
+    paddingVertical: 20,
+    borderRadius: 20,
+    alignSelf: "center",
+    paddingHorizontal: 1,
   },
-  add: {
-    backgroundColor: "#E4680B",
-    padding: 10,
-    borderRadius: 50,
-    justifyContent: "center",
-  },
-  but: {
-    color: "#FFEEC2",
-    textAlign: "center",
-    paddingHorizontal: 20,
-  },
-  cp: {
-    fontFamily: "Poppins-Regular",
-    color: "#E4680B",
-    fontSize: 22,
-    marginRight: 100,
-  },
-  headings: {
-    marginVertical: 5,
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    marginHorizontal: 30,
+  char: {
+    height: 300,
+    width: 270,
+    marginTop: 15,
   },
   header: {
-    marginLeft: 70,
-    marginTop: 10,
     fontFamily: "Poppins-Medium",
     color: "#E4680B",
     textAlign: "center",
-    fontSize: 30,
+    fontSize: 23,
+  },
+  subH: {
+    fontFamily: "Poppins-Medium",
+    color: "#E4680B",
+    textAlign: "center",
+    fontSize: 13,
+  },
+  cross: {
+    height: 18,
+    width: 18,
+    position: "absolute",
+    top: 20,
+    left: 20,
   },
 });
