@@ -23,14 +23,13 @@ const AddChild = ({ navigation }) => {
       <View
         style={{
           flexDirection: "row",
-          alignItems: "center",
-          margin: 15,
-          justifyContent: "space-between",
+          // alignItems: "center",
+          marginTop: 15,
         }}
       >
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Profiles")}>
           <Image
-            style={{ width: 20, height: 20 }}
+            style={{ width: 20, height: 20, marginTop: 20, marginLeft: 20 }}
             source={require("../assets/back.png")}
           />
         </TouchableOpacity>
