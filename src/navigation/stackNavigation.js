@@ -23,14 +23,10 @@ const StackNavigation = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-<<<<<<< Updated upstream
-      }}>
-=======
       }}
     >
       <Stack.Screen name="Leaderboard" component={Leaderboard} />
       <Stack.Screen name="Profiles" component={Profiles} />
->>>>>>> Stashed changes
       <Stack.Screen name="Splash" component={SplashScreen} />
       <Stack.Screen name="Welcome" component={WelcomeScreen} />
       <Stack.Screen name="Signin" component={Signin} />
