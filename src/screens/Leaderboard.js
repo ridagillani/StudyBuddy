@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import Score from "../components/Score";
 
-const Leaderboard = () => {
+const Leaderboard = ({ navigation }) => {
   console;
   return (
     <View>
@@ -35,7 +35,7 @@ const Leaderboard = () => {
             />
           </Pressable>
           <View style={styles.iconsCont}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.openDrawer()}>
               <Image
                 style={styles.icon}
                 source={require("../assets/icons/Menu-right.png")}

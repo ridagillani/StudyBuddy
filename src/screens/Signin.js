@@ -18,7 +18,9 @@ export default function Signin({ navigation }) {
     <ImageBackground source={require("../assets/bg.png")} style={{ flex: 1 }}>
       <TouchableOpacity
         style={styles.nav}
-        onPress={() => navigation.navigate("Welcome")}
+        onPress={() =>
+          navigation.navigate("MainNavigation", { screen: "Welcome" })
+        }
       >
         <Image
           style={styles.Icon}
@@ -46,14 +48,16 @@ export default function Signin({ navigation }) {
       </TouchableOpacity>
       <SmallButton
         text={"Sign in"}
-        onpress={() => navigation.navigate("Home")}
+        onpress={() => navigation.navigate("ChildN", { screen: "Home" })}
       />
       <ContinueWith />
       <GoogleButton text={"Sign in with Google"} />
       <Text style={styles.label2}>
         Don't Have an account?
         <Text
-          onPress={() => navigation.navigate("Signup")}
+          onPress={() =>
+            navigation.navigate("MainNavigation", { screen: "Signup" })
+          }
           style={styles.signup}
         >
           Sign up

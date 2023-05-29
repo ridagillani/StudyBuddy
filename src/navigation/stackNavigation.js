@@ -26,30 +26,21 @@ const StackNavigation = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-<<<<<<< Updated upstream
       }}
     >
       {/* <Stack.Screen name="Leaderboard" component={Leaderboard} /> */}
       {/* <Stack.Screen name="ChildProgress" component={ChildProgress} /> */}
 
-      <Stack.Screen name="Drawer" component={DrawerNavigation} />
-      <Stack.Screen name="Profiles" component={Profiles} />
-=======
-      }}
-    >
-      <Stack.Screen name="Leaderboard" component={Leaderboard} />
-      <Stack.Screen name="Profiles" component={Profiles} />
->>>>>>> Stashed changes
-      <Stack.Screen name="Splash" component={SplashScreen} />
-      <Stack.Screen name="Welcome" component={WelcomeScreen} />
-      <Stack.Screen name="Signin" component={Signin} />
-      <Stack.Screen name="Signup" component={Signup} />
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Notifications" component={Notifications} />
-      <Stack.Screen name="Settings" component={Settingss} />
-      <Stack.Screen name="AddChild" component={AddChild} />
+      {/* <Stack.Screen name="Drawer" component={DrawerNavigation} /> */}
+      {/* <Stack.Screen name="Profiles" component={Profiles} /> */}
+      {/* <Stack.Screen name="Leaderboard" component={Leaderboard} /> */}
+      {/* <Stack.Screen name="Profiles" component={Profiles} /> */}
+      {/* <Stack.Screen name="Home" component={Home} /> */}
+      {/* <Stack.Screen name="Notifications" component={Notifications} /> */}
+      {/* <Stack.Screen name="Settings" component={Settingss} /> */}
+      {/* <Stack.Screen name="AddChild" component={AddChild} />
       <Stack.Screen name="EditChild" component={EditChild} />
-      <Stack.Screen name="ChildAdded" component={ChildAdded} />
+      <Stack.Screen name="ChildAdded" component={ChildAdded} /> */}
     </Stack.Navigator>
   );
 };

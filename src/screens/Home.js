@@ -12,7 +12,7 @@ import {
 
 import Categories from "../components/Categories";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   console;
   return (
     <View>
@@ -22,7 +22,7 @@ const Home = () => {
         style={styles.background}
       >
         <View style={styles.iconsCont}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <Image
               style={styles.icon}
               source={require("../assets/icons/Menu-right.png")}

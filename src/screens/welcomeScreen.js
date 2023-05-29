@@ -26,13 +26,19 @@ const WelcomeScreen = ({ navigation }) => {
         <Text style={styles.stxt}>Start as</Text>
         <View style={styles.btnsView}>
           <TouchableOpacity
-            onPress={() => navigation.navigate("Main", { screen: "Signin" })}
+            onPress={() =>
+              navigation.navigate("MainNavigation", { screen: "Signin" })
+            }
           >
             <View style={styles.cbtn}>
               <Text>Child</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate("Signin")}>
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate("MainNavigation", { screen: "Signin" })
+            }
+          >
             <View style={styles.gBtn}>
               <Text style={{ color: "#E4680B" }}>Guardian</Text>
             </View>

@@ -4,6 +4,9 @@ import DrawerNavigation from "./drawerNavigation";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import GameStack from "./GameStack";
+import MainNavigation from "./MainNavigation";
+import ParentNavigation from "./ParentNavigation";
+import ChildDrawerNavigation from "./ChildNavigation";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,8 +18,11 @@ const RouteNavigation = () => {
           headerShown: false,
         }}
       >
+        <Stack.Screen name="MainNavigation" component={MainNavigation} />
         <Stack.Screen name="Main" component={StackNavigation} />
         <Stack.Screen name="Game" component={GameStack} />
+        <Stack.Screen name="Parent" component={ParentNavigation} />
+        <Stack.Screen name="ChildN" component={ChildDrawerNavigation} />
       </Stack.Navigator>
     </NavigationContainer>
   );
