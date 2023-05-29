@@ -28,7 +28,7 @@ const AddChild = ({ navigation }) => {
           justifyContent: "space-between",
         }}
       >
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image
             style={{ width: 20, height: 20 }}
             source={require("../assets/back.png")}
@@ -58,7 +58,7 @@ const AddChild = ({ navigation }) => {
           option={2}
         />
         <SmallButton
-          onPress={() => navigation.navigate("ChildProgress")}
+          onpress={() => navigation.navigate("Profiles")}
           text={"Submit"}
         />
       </View>

@@ -24,7 +24,7 @@ const SmallButton = ({ text, onpress }) => {
 
   return (
     <TouchableOpacity onPress={onpress} style={styles.cbtn}>
-      <Text style={{ fontWeight: "500" }}>{text}</Text>
+      <Text style={{ fontWeight: "500", color: "#FFEEC2" }}>{text}</Text>
     </TouchableOpacity>
   );
 };

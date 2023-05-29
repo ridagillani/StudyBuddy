@@ -29,6 +29,7 @@ const ChildProgress = ({ navigation }) => {
             paddingTop: 15,
             paddingLeft: 15,
           }}
+          onPress={() => navigation.openDrawer()}
         >
           <Image
             style={{ width: 60, height: 60 }}

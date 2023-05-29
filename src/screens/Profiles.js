@@ -26,7 +26,7 @@ const Profiles = ({ navigation }) => {
             justifyContent: "space-between",
           }}
         >
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
             <Image
               style={{ width: 20, height: 20 }}
               source={require("../assets/back.png")}
@@ -45,18 +45,16 @@ const Profiles = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <ScrollView>
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
+          <ProfileCard
+            name={"Muhammad Haseeb"}
+            password={"12345678"}
+            navigation={navigation}
+          />
+          <ProfileCard
+            name={"Muhammad Haseeb"}
+            password={"12345678"}
+            navigation={navigation}
+          />
         </ScrollView>
       </ImageBackground>
     </View>

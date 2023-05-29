@@ -10,7 +10,7 @@ import {
   Image,
 } from "react-native";
 
-const EditChild = () => {
+const EditChild = ({ navigation }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setcPass] = useState("");
@@ -29,7 +29,7 @@ const EditChild = () => {
           justifyContent: "space-between",
         }}
       >
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image
             style={{ width: 20, height: 20 }}
             source={require("../assets/back.png")}
@@ -57,7 +57,10 @@ const EditChild = () => {
           placeholder={"Confirm Password"}
           option={2}
         />
-        <SmallButton text={"Submit"} />
+        <SmallButton
+          onpress={() => navigation.navigate("Profiles")}
+          text={"Submit"}
+        />
       </View>
     </ImageBackground>
   );

@@ -1,10 +1,9 @@
-import React from 'react';
-import RouteNavigation from './src/navigation/routeNavigation';
+import "react-native-gesture-handler";
+import React from "react";
+import RouteNavigation from "./src/navigation/routeNavigation";
 
 function App() {
-  return (
-    <RouteNavigation/>
-  );
+  return <RouteNavigation />;
 }
 
 export default App;
