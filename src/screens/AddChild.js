@@ -28,7 +28,7 @@ const AddChild = ({ navigation }) => {
           justifyContent: "space-between",
         }}
       >
-        <TouchableOpacity onPress={() => navigation.navigate("Profiles")}>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image
             style={{ width: 20, height: 20 }}
             source={require("../assets/back.png")}

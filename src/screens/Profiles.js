@@ -26,13 +26,10 @@ const Profiles = ({ navigation }) => {
             justifyContent: "space-between",
           }}
         >
-          <TouchableOpacity
-            onPress={() => navigation.navigate("ChildProgress")}
-          >
+          <TouchableOpacity onPress={() => navigation.goBack()}>
             <Image
               style={{ width: 20, height: 20 }}
               source={require("../assets/back.png")}
-              onpress={() => navigation.navigate("Home")}
             />
           </TouchableOpacity>
           <Text style={styles.header}>Profiles</Text>
@@ -48,18 +45,16 @@ const Profiles = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <ScrollView>
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
-          <ProfileCard name={"Muhammad Haseeb"} password={"12345678"} />
+          <ProfileCard
+            name={"Muhammad Haseeb"}
+            password={"12345678"}
+            navigation={navigation}
+          />
+          <ProfileCard
+            name={"Muhammad Haseeb"}
+            password={"12345678"}
+            navigation={navigation}
+          />
         </ScrollView>
       </ImageBackground>
     </View>

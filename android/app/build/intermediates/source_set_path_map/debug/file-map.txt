@@ -7,14 +7,14 @@ com.studybuddy.app-jetified-autofill-1.1.0-5 /Users/ridagilani/.gradle/caches/tr
 com.studybuddy.app-lifecycle-runtime-2.4.0-6 /Users/ridagilani/.gradle/caches/transforms-3/3584cd402b4fda3a4c5564688eaa83ea/transformed/lifecycle-runtime-2.4.0/res
 com.studybuddy.app-core-1.7.0-7 /Users/ridagilani/.gradle/caches/transforms-3/3994986e4b6f29f228dfe8fb9122f0d7/transformed/core-1.7.0/res
 com.studybuddy.app-lifecycle-viewmodel-2.3.1-8 /Users/ridagilani/.gradle/caches/transforms-3/3bae22501956cb2f40cb2aae7d68aabd/transformed/lifecycle-viewmodel-2.3.1/res
-com.studybuddy.app-jetified-core-ktx-1.5.0-9 /Users/ridagilani/.gradle/caches/transforms-3/5443d074b6860b81a99b6cfd7a9962ad/transformed/jetified-core-ktx-1.5.0/res
-com.studybuddy.app-jetified-emoji2-views-helper-1.0.0-10 /Users/ridagilani/.gradle/caches/transforms-3/65bba5c785f706bb99b94479c9483ed7/transformed/jetified-emoji2-views-helper-1.0.0/res
-com.studybuddy.app-recyclerview-1.1.0-11 /Users/ridagilani/.gradle/caches/transforms-3/6e936cb5fac4c550c2149379f4d482f0/transformed/recyclerview-1.1.0/res
-com.studybuddy.app-jetified-viewpager2-1.0.0-12 /Users/ridagilani/.gradle/caches/transforms-3/7b19121545223a5719f58d9c1062612b/transformed/jetified-viewpager2-1.0.0/res
-com.studybuddy.app-jetified-appcompat-resources-1.4.1-13 /Users/ridagilani/.gradle/caches/transforms-3/858a0a1ce5582950d896423a8f83984e/transformed/jetified-appcompat-resources-1.4.1/res
-com.studybuddy.app-jetified-savedstate-1.1.0-14 /Users/ridagilani/.gradle/caches/transforms-3/9502a6bb71cbe65ff7605c9abe0fd9c7/transformed/jetified-savedstate-1.1.0/res
-com.studybuddy.app-fragment-1.3.6-15 /Users/ridagilani/.gradle/caches/transforms-3/ac49766205ccd42177b4d582840522f2/transformed/fragment-1.3.6/res
-com.studybuddy.app-jetified-lifecycle-process-2.4.0-16 /Users/ridagilani/.gradle/caches/transforms-3/afe3a0cc82c76a7c864d2efd8324d92e/transformed/jetified-lifecycle-process-2.4.0/res
+com.studybuddy.app-jetified-emoji2-views-helper-1.0.0-9 /Users/ridagilani/.gradle/caches/transforms-3/65bba5c785f706bb99b94479c9483ed7/transformed/jetified-emoji2-views-helper-1.0.0/res
+com.studybuddy.app-recyclerview-1.1.0-10 /Users/ridagilani/.gradle/caches/transforms-3/6e936cb5fac4c550c2149379f4d482f0/transformed/recyclerview-1.1.0/res
+com.studybuddy.app-jetified-viewpager2-1.0.0-11 /Users/ridagilani/.gradle/caches/transforms-3/7b19121545223a5719f58d9c1062612b/transformed/jetified-viewpager2-1.0.0/res
+com.studybuddy.app-jetified-appcompat-resources-1.4.1-12 /Users/ridagilani/.gradle/caches/transforms-3/858a0a1ce5582950d896423a8f83984e/transformed/jetified-appcompat-resources-1.4.1/res
+com.studybuddy.app-jetified-savedstate-1.1.0-13 /Users/ridagilani/.gradle/caches/transforms-3/9502a6bb71cbe65ff7605c9abe0fd9c7/transformed/jetified-savedstate-1.1.0/res
+com.studybuddy.app-fragment-1.3.6-14 /Users/ridagilani/.gradle/caches/transforms-3/ac49766205ccd42177b4d582840522f2/transformed/fragment-1.3.6/res
+com.studybuddy.app-jetified-lifecycle-process-2.4.0-15 /Users/ridagilani/.gradle/caches/transforms-3/afe3a0cc82c76a7c864d2efd8324d92e/transformed/jetified-lifecycle-process-2.4.0/res
+com.studybuddy.app-jetified-core-ktx-1.6.0-16 /Users/ridagilani/.gradle/caches/transforms-3/b29fb047d5ceb4e1e28b5eeac2bee910/transformed/jetified-core-ktx-1.6.0/res
 com.studybuddy.app-jetified-startup-runtime-1.0.0-17 /Users/ridagilani/.gradle/caches/transforms-3/be8f8d425926b2ab9ec0d8d0c3caae7a/transformed/jetified-startup-runtime-1.0.0/res
 com.studybuddy.app-jetified-emoji2-1.0.0-18 /Users/ridagilani/.gradle/caches/transforms-3/c1cd3487ee93faa69a46c921c06f102e/transformed/jetified-emoji2-1.0.0/res
 com.studybuddy.app-jetified-tracing-1.1.0-19 /Users/ridagilani/.gradle/caches/transforms-3/d11b6876e6eb8c85795979da7f2458f5/transformed/jetified-tracing-1.1.0/res
@@ -30,6 +30,8 @@ com.studybuddy.app-mergeDebugResources-28 /Users/ridagilani/iCloud Drive (Archiv
 com.studybuddy.app-merged_res-29 /Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/android/app/build/intermediates/merged_res/debug
 com.studybuddy.app-debug-30 /Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/android/app/src/debug/res
 com.studybuddy.app-main-31 /Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/android/app/src/main/res
-com.studybuddy.app-packaged_res-32 /Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/node_modules/react-native-safe-area-context/android/build/intermediates/packaged_res/debug
-com.studybuddy.app-packaged_res-33 /Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/node_modules/react-native-screens/android/build/intermediates/packaged_res/debug
-com.studybuddy.app-packaged_res-34 /Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/node_modules/react-native-vector-icons/android/build/intermediates/packaged_res/debug
+com.studybuddy.app-packaged_res-32 /Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/node_modules/react-native-gesture-handler/android/build/intermediates/packaged_res/debug
+com.studybuddy.app-packaged_res-33 /Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/node_modules/react-native-reanimated/android/build/intermediates/packaged_res/debug
+com.studybuddy.app-packaged_res-34 /Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/node_modules/react-native-safe-area-context/android/build/intermediates/packaged_res/debug
+com.studybuddy.app-packaged_res-35 /Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/node_modules/react-native-screens/android/build/intermediates/packaged_res/debug
+com.studybuddy.app-packaged_res-36 /Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/node_modules/react-native-vector-icons/android/build/intermediates/packaged_res/debug

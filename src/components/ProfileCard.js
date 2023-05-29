@@ -6,7 +6,6 @@ const ProfileCard = ({ name, password, navigation }) => {
     <View style={styles.card}>
       <View style={styles.buttonssV}>
         <Text style={styles.name}>{name}</Text>
-
         <View style={{ flexDirection: "row" }}>
           <TouchableOpacity onPress={() => navigation.navigate("EditChild")}>
             <Image

@@ -29,7 +29,7 @@ const EditChild = ({ navigation }) => {
           justifyContent: "space-between",
         }}
       >
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image
             style={{ width: 20, height: 20 }}
             source={require("../assets/back.png")}
@@ -57,7 +57,10 @@ const EditChild = ({ navigation }) => {
           placeholder={"Confirm Password"}
           option={2}
         />
-        <SmallButton text={"Submit"} />
+        <SmallButton
+          onpress={() => navigation.navigate("Profiles")}
+          text={"Submit"}
+        />
       </View>
     </ImageBackground>
   );

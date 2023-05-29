@@ -13,7 +13,8 @@ const RouteNavigation = () => {
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
-        }}>
+        }}
+      >
         <Stack.Screen name="Main" component={StackNavigation} />
         <Stack.Screen name="Game" component={GameStack} />
       </Stack.Navigator>
