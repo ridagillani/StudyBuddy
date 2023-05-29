@@ -1,14 +1,18 @@
+<<<<<<< HEAD
 #Mon May 29 00:26:44 PKT 2023
+=======
+#Sun May 28 22:16:31 PKT 2023
+>>>>>>> 959ea6da15ac7b518e2af7115fa1312d3c9ec099
 path.4=7/classes.dex
 path.3=14/classes.dex
 path.2=0/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
-base.4=/Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
-base.3=/Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
-base.2=/Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.1=/Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/android/app/build/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex
-base.0=/Users/ridagilani/iCloud Drive (Archive)/Documents/Data/Local Disk D/6th Semester/Mobile App Development/StudyBuddy/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.4=D\:\\Desktop\\6th Semester\\Mobile app\\Development\\StudyBuddy\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.3=D\:\\Desktop\\6th Semester\\Mobile app\\Development\\StudyBuddy\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
+base.2=D\:\\Desktop\\6th Semester\\Mobile app\\Development\\StudyBuddy\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.1=D\:\\Desktop\\6th Semester\\Mobile app\\Development\\StudyBuddy\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
+base.0=D\:\\Desktop\\6th Semester\\Mobile app\\Development\\StudyBuddy\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
