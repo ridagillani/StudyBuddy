@@ -26,7 +26,6 @@ const StackNavigation = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-<<<<<<< Updated upstream
       }}
     >
       {/* <Stack.Screen name="Leaderboard" component={Leaderboard} /> */}
@@ -34,9 +33,8 @@ const StackNavigation = () => {
 
       <Stack.Screen name="Drawer" component={DrawerNavigation} />
       <Stack.Screen name="Profiles" component={Profiles} />
-=======
-      }}
-    >
+
+     
       <Stack.Screen name="Leaderboard" component={Leaderboard} />
       <Stack.Screen name="Profiles" component={Profiles} />
       <Stack.Screen name="Splash" component={SplashScreen} />
