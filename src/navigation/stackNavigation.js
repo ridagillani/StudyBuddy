@@ -41,8 +41,6 @@ const StackNavigation = () => {
       {/* <Stack.Screen name="AddChild" component={AddChild} />
       <Stack.Screen name="Drawer" component={DrawerNavigation} />
       <Stack.Screen name="Profiles" component={Profiles} />
-
-     
       <Stack.Screen name="Leaderboard" component={Leaderboard} />
       <Stack.Screen name="Profiles" component={Profiles} />
       <Stack.Screen name="Splash" component={SplashScreen} />
