@@ -9,7 +9,7 @@ const CustomButton = ({
   paddingHorizontal,
   paddingVertical,
   onPress,
-  borderRadius
+  borderRadius,
 }) => {
   const styles = StyleSheet.create({
     container: {
@@ -18,7 +18,7 @@ const CustomButton = ({
       paddingHorizontal: paddingHorizontal
         ? paddingHorizontal
         : windowWidth * 0.07,
-      borderRadius: borderRadius? borderRadius:  windowWidth * 0.015,
+      borderRadius: borderRadius ? borderRadius : windowWidth * 0.015,
       alignSelf: "center",
       alignItems: "center",
     },

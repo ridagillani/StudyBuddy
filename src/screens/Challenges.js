@@ -11,6 +11,8 @@ import {
 } from "react-native";
 
 import Categories from "../components/Categories";
+import HighScore from "../components/HighScore";
+import ChallengeComponent from "../components/ChallengeComponent";
 
 const Challenges = ({ navigation }) => {
   console;
@@ -73,105 +75,14 @@ const Challenges = ({ navigation }) => {
         >
           Challenge
         </Text>
-        <View
-          style={{
-            width: 260,
-            height: 40,
-            backgroundColor: "#FFEEC2",
-            alignSelf: "center",
-            flexDirection: "row",
-            borderRadius: 50,
-            shadowColor: "black",
-            shadowOffset: { width: 10, height: 15 },
-            shadowOpacity: 5,
-            shadowRadius: 5,
-            elevation: 8,
-            marginBottom: 30,
-          }}
-        >
-          <View
-            style={{
-              width: 100,
-              backgroundColor: "#E4680B",
-              borderRadius: 50,
-              height: "100%",
-              alignItems: "center",
-              justifyContent: "center",
-              shadowColor: "black",
-              shadowOffset: { width: 10, height: 15 },
-              shadowOpacity: 5,
-              shadowRadius: 5,
-              elevation: 8,
-            }}
-          >
-            <Text style={{ fontSize: 16 }}>MCQ'S</Text>
-          </View>
-          <View
-            style={{
-              width: 80,
-              borderRadius: 50,
-              height: "100%",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Text style={{ fontSize: 16, color: "#E4680B" }}>Match</Text>
-          </View>
-          <View
-            style={{
-              width: 60,
-              borderRadius: 50,
-              height: "100%",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Text style={{ fontSize: 16, color: "#E4680B" }}>Identify</Text>
-          </View>
-        </View>
-        <View
-          style={{
-            width: 190,
-            height: 190,
-            backgroundColor: "#FFEEC2",
-            borderRadius: 100,
-            alignItems: "center",
-            justifyContent: "center",
-            alignSelf: "center",
-            shadowColor: "black",
-            shadowOffset: { width: 10, height: 15 },
-            shadowOpacity: 5,
-            shadowRadius: 5,
-            elevation: 8,
-          }}
-        >
-          <View
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-              marginBottom: 10,
-            }}
-          >
-            <Text
-              style={{
-                fontSize: 64,
-                color: "#E4680B",
-                fontFamily: "Comfortaa-Bold",
-              }}
-            >
-              14
-            </Text>
-            <Text style={{ fontSize: 16, color: "#E4680B" }}>
-              Highest Score
-            </Text>
-          </View>
-        </View>
+
+        <ChallengeComponent />
+        <HighScore score={"24"} />
         <View
           style={{
             flexDirection: "column-reverse",
             width: "100%",
             height: "35%",
-            // backgroundColor: "red",
           }}
         >
           <Pressable>
