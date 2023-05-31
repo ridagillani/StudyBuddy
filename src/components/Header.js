@@ -12,7 +12,7 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-const Header = ({ color, navigation }) => {
+const Header = ({ color, navigation, option, onButtonPress }) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -34,11 +34,21 @@ const Header = ({ color, navigation }) => {
         </View>
 
         <View>
-          <TouchableOpacity onPress={() => {}} style={styles.counter}>
-            <Image
-              source={require("../assets/icons/settings.png")}
-              style={[styles.image, { height: windowHeight * 0.028 }]}
-            />
+          <TouchableOpacity onPress={onButtonPress} style={styles.counter}>
+            {option ? (
+              <Image
+                source={require("../assets/icons/menu-lines.png")}
+                style={{
+                  width: windowWidth * 0.045,
+                  height: windowHeight * 0.018,
+                }}
+              />
+            ) : (
+              <Image
+                source={require("../assets/icons/settings.png")}
+                style={[styles.image, { height: windowHeight * 0.028 }]}
+              />
+            )}
           </TouchableOpacity>
         </View>
       </View>

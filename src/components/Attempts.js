@@ -47,7 +47,7 @@ const Attempts = ({ number, game }) => {
           flexDirection: "row",
           justifyContent: "space-between",
           marginVertical: 15,
-          marginHorizontal: 20,
+          marginHorizontal: 10,
         }}
       >
         <OrangeCards score={12} />

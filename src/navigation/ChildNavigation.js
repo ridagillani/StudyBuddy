@@ -1,36 +1,79 @@
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import SplashScreen from "../screens/SplashScreen";
-import Identify from "../screens/Identify";
-import WelcomeScreen from "../screens/welcomeScreen";
 import Leaderboard from "../screens/Leaderboard";
-import ChildProgress from "../screens/childProgress";
-import Signin from "../screens/Signin";
-import Settingss from "../screens/Settingss";
-import AddChild from "../screens/AddChild";
-import EditChild from "../screens/EditChild";
-import Profiles from "../screens/Profiles";
-import ChildAdded from "../screens/ChildAdded";
-import Signup from "../screens/Signup";
 import Home from "../screens/Home";
-import Match from "../screens/Match";
-import Result from "../screens/Result";
-import Notifications from "../screens/Notifications";
-import MenuParent from "../components/MenuParent";
-import DrawerNavigation from "./drawerNavigation";
 import Help from "../screens/Help";
+import Challenges from "../screens/Challenges";
+import { Dimensions, Image } from "react-native";
+import CustomDrawer from "../components/CustomDrawer";
 
 const Drawer = createDrawerNavigator();
+
+const windowWidth = Dimensions.get("window").width;
+const windowHeight = Dimensions.get("window").height;
 
 const ChildDrawerNavigation = () => {
   return (
     <Drawer.Navigator
-      screenOptions={{ headerShown: false, drawerPosition: "right" }}
-    >
-      <Drawer.Screen name="Home" component={Home} />
-      <Drawer.Screen name="Leaderboard" component={Leaderboard} />
-      <Drawer.Screen name="Help" component={Help} />
+      drawerContent={(props) => <CustomDrawer {...props} />}
+      screenOptions={{
+        headerShown: false,
+        drawerStyle: {
+          width: windowWidth * 0.65,
+        },
+        drawerLabelStyle: {
+          color: "#E4680B",
+          fontFamily: "Poppins-Regular",
+          fontSize: 16,
+          marginLeft: -20,
+        },
+        drawerPosition: "right",
+        drawerActiveBackgroundColor: "rgba(228, 104, 11, 0.4)",
+      }}>
+      <Drawer.Screen
+        name="Home"
+        component={Home}
+        options={{
+          drawerItemStyle: { display: "none" },
+        }}
+      />
+      <Drawer.Screen
+        name="Leaderboard"
+        component={Leaderboard}
+        options={{
+          drawerIcon: () => (
+            <Image
+              source={require("../assets/icons/leader.png")}
+              style={{
+                width: windowWidth * 0.055,
+                height: windowHeight * 0.026,
+              }}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Help"
+        component={Help}
+        options={{
+          drawerIcon: () => (
+            <Image
+              source={require("../assets/icons/help.png")}
+              style={{
+                width: windowWidth * 0.055,
+                height: windowHeight * 0.026,
+              }}
+            />
+          ),
+        }}
+      />
+      <Drawer.Screen
+        name="Challenges"
+        component={Challenges}
+        options={{
+          drawerItemStyle: { display: "none" },
+        }}
+      />
     </Drawer.Navigator>
   );
 };

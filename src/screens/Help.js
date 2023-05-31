@@ -20,12 +20,16 @@ const windowHeight = Dimensions.get("window").height;
 
 const Help = ({ navigation }) => {
   const [count, setCount] = React.useState(1);
-  const handleNext = () => {};
   return (
     <ImageBackground
       source={require("../assets/bg.png")}
       style={styles.container}>
-      <Header color={"#FFEEC2"} />
+      <Header
+        color={"#FFEEC2"}
+        option
+        navigation={navigation}
+        onButtonPress={() => navigation.openDrawer()}
+      />
       <Text style={styles.text}>Help</Text>
 
       <Image source={require("../assets/help.png")} style={styles.image} />

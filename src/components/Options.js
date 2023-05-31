@@ -1,9 +1,9 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
-const Options = ({ option, name, next }) => {
+const Options = ({ option, name, next, onPress }) => {
   return (
-    <TouchableOpacity style={styles.option}>
+    <TouchableOpacity style={styles.option} onPress={onPress}>
       <View
         style={{
           flexDirection: "row",
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     alignContent: "center",
     justifyContent: "space-between",
-    marginHorizontal: 15,
+    marginHorizontal: 9,
     // marginVertical: 10,
     padding: 8,
     // backgroundColor: "black",
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     fontFamily: "Poppins-Regular",
     color: "#E4680B",
     fontSize: 15,
-    marginLeft: 15,
+    marginLeft: 13,
     marginTop: 4,
   },
 });

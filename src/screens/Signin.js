@@ -5,23 +5,53 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
+  Alert
 } from "react-native";
 import CustomInput from "../components/CustomInput";
 import ContinueWith from "../components/ContinueWith";
 import GoogleButton from "../components/GoogleButton";
 import SmallButton from "../components/SmallButton";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function Signin({ navigation }) {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [user, setUser] = React.useState("");
+
+  React.useEffect(() => {
+    const getUser = async () => {
+      try {
+        const user = await AsyncStorage.getItem("user");
+        if (user) {
+          setUser(user);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getUser();
+  }, []);
+
+  const handlePress = () => {
+    if (username === "") {
+      return Alert.alert("Please enter username");
+    } else if (password === "") {
+      return Alert.alert("Please enter username");
+    } else if (user === "Child") {
+      navigation.replace("ChildN", { screen: "Home" });
+    } else {
+      navigation.replace("Parent", { screeen: "Drawer" });
+    }
+  };
+
   return (
     <ImageBackground source={require("../assets/bg.png")} style={{ flex: 1 }}>
       <TouchableOpacity
         style={styles.nav}
         onPress={() =>
           navigation.navigate("MainNavigation", { screen: "Welcome" })
-        }
-      >
+        }>
         <Image
           style={styles.Icon}
           source={require("../assets/icons/back.png")}
@@ -46,24 +76,23 @@ export default function Signin({ navigation }) {
       <TouchableOpacity style={styles.container}>
         <Text style={styles.label}>Forgot Password?</Text>
       </TouchableOpacity>
-      <SmallButton
-        text={"Sign in"}
-        onpress={() => navigation.navigate("ChildN", { screen: "Home" })}
-      />
+
+      <SmallButton text={"Sign in"} onpress={handlePress} />
       <ContinueWith />
       <GoogleButton text={"Sign in with Google"} />
-      <Text style={styles.label2}>
-        Don't Have an account?
-        <Text
-          onPress={() =>
-            navigation.navigate("MainNavigation", { screen: "Signup" })
-          }
-          style={styles.signup}
-        >
-          Sign up
-        </Text>{" "}
-        now
-      </Text>
+      {user === "Child" ? null : (
+        <Text style={styles.label2}>
+          Don't Have an account?
+          <Text
+            onPress={() =>
+              navigation.navigate("MainNavigation", { screen: "Signup" })
+            }
+            style={styles.signup}>
+            Sign up
+          </Text>{" "}
+          now
+        </Text>
+      )}
     </ImageBackground>
   );
 }

@@ -1,5 +1,13 @@
 import React from "react";
-import { TextInput, View, StyleSheet, Image, Dimensions } from "react-native";
+import {
+  TextInput,
+  View,
+  StyleSheet,
+  Image,
+  Dimensions,
+  TouchableOpacity,
+} from "react-native";
+import Icon from "react-native-vector-icons/Ionicons";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
@@ -11,13 +19,15 @@ const CustomInput = ({
   secureTextEntry,
   option,
 }) => {
+  const [show, setShow] = React.useState(secureTextEntry);
+
   return (
     <View style={styles.container}>
       <TextInput
         value={value}
         onChangeText={onChangeText}
         placeholder={placeholder}
-        secureTextEntry={secureTextEntry}
+        secureTextEntry={show}
         style={styles.input}
         placeholderTextColor="#E4680B"
       />
@@ -27,10 +37,16 @@ const CustomInput = ({
           source={require("../assets/icons/user.png")}
         />
       ) : option === 2 ? (
-        <Image
-          style={{ height: 12, width: 20 }}
-          source={require("../assets/icons/eye.png")}
-        />
+        <TouchableOpacity onPress={() => setShow(!show)}>
+          {show ? (
+            <Image
+              style={{ height: 12, width: 20 }}
+              source={require("../assets/icons/eye.png")}
+            />
+          ) : (
+            <Icon name="eye-off" color="#E4680B" size={20} />
+          )}
+        </TouchableOpacity>
       ) : option === 3 ? (
         <Image
           style={{ height: 15, width: 15 }}

@@ -7,8 +7,19 @@ import {
   StyleSheet,
   TouchableOpacity,
 } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const WelcomeScreen = ({ navigation }) => {
+  const handlePress = async (person) => {
+    try {
+      await AsyncStorage.setItem("user", person).then(() =>
+        navigation.navigate("MainNavigation", { screen: "Signin" })
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <ImageBackground source={require("../assets/cBG.png")} style={{ flex: 1 }}>
       <View
@@ -16,29 +27,23 @@ const WelcomeScreen = ({ navigation }) => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-        }}
-      >
+        }}>
         <View style={{ marginTop: 140 }}>
           <Text style={styles.heading}>Welcome to{"\n"}Study Buddy</Text>
         </View>
+
         <Image source={require("../assets/charac.png")} />
         <Text style={styles.tLine}>Learn Faster, Grow Smarter</Text>
         <Text style={styles.stxt}>Start as</Text>
+
         <View style={styles.btnsView}>
-          <TouchableOpacity
-            onPress={() =>
-              navigation.navigate("MainNavigation", { screen: "Signin" })
-            }
-          >
+          <TouchableOpacity onPress={() => handlePress("Child")}>
             <View style={styles.cbtn}>
               <Text>Child</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() =>
-              navigation.navigate("MainNavigation", { screen: "Signin" })
-            }
-          >
+
+          <TouchableOpacity onPress={() => handlePress("Parent")}>
             <View style={styles.gBtn}>
               <Text style={{ color: "#E4680B" }}>Guardian</Text>
             </View>
