@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ImageBackground,
   StyleSheet,
@@ -12,10 +12,10 @@ import {
 
 import Categories from "../components/Categories";
 import HighScore from "../components/HighScore";
-import ChallengeComponent from "../components/ChallengeComponent";
+import ChallengeButton from "../components/ChalllengeButton";
 
 const Challenges = ({ navigation }) => {
-  console;
+  const [Cstate, setCstate] = useState(1);
   return (
     <View>
       <ImageBackground
@@ -31,7 +31,7 @@ const Challenges = ({ navigation }) => {
             marginLeft: 10,
           }}
         >
-          <Pressable>
+          <Pressable onPress={() => navigation.goBack()}>
             <Image
               style={{ height: 25, width: 25 }}
               source={require("../assets/icons/back.png")}
@@ -76,7 +76,36 @@ const Challenges = ({ navigation }) => {
           Challenge
         </Text>
 
-        <ChallengeComponent />
+        <View
+          style={{
+            backgroundColor: "#FFEEC2",
+            alignSelf: "center",
+            flexDirection: "row",
+            borderRadius: 50,
+            shadowColor: "black",
+            shadowOffset: { width: 10, height: 15 },
+            shadowOpacity: 5,
+            shadowRadius: 5,
+            elevation: 8,
+            marginBottom: 30,
+          }}
+        >
+          <ChallengeButton
+            text={"MCQ's"}
+            onpress={() => setCstate(1)}
+            state={Cstate === 1 ? true : false}
+          />
+          <ChallengeButton
+            text={"Match"}
+            onpress={() => setCstate(2)}
+            state={Cstate === 2 ? true : false}
+          />
+          <ChallengeButton
+            text={"Identify"}
+            onpress={() => setCstate(3)}
+            state={Cstate === 3 ? true : false}
+          />
+        </View>
         <HighScore score={"24"} />
         <View
           style={{

@@ -19,12 +19,12 @@ const RouteNavigation = () => {
           headerShown: false,
         }}
       >
-        {/* <Stack.Screen name="Challenges" component={Challenges} /> */}
-        <Stack.Screen name="MainNavigation" component={MainNavigation} />
+        <Stack.Screen name="Challenges" component={Challenges} />
+        {/* <Stack.Screen name="MainNavigation" component={MainNavigation} />
         <Stack.Screen name="Main" component={StackNavigation} />
         <Stack.Screen name="Game" component={GameStack} />
         <Stack.Screen name="Parent" component={ParentNavigation} />
-        <Stack.Screen name="ChildN" component={ChildDrawerNavigation} />
+        <Stack.Screen name="ChildN" component={ChildDrawerNavigation} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
