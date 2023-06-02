@@ -17,6 +17,7 @@ import AddChild from "../screens/AddChild";
 import EditChild from "../screens/EditChild";
 import ChildAdded from "../screens/ChildAdded";
 import DrawerNavigation from "./drawerNavigation";
+import Notifications from "../screens/Notifications";
 
 const Stack = createNativeStackNavigator();
 
@@ -26,7 +27,8 @@ const RouteNavigation = () => {
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
-        }}>
+        }}
+      >
         <Stack.Screen name="MainNavigation" component={MainNavigation} />
         <Stack.Screen name="Parent" component={ParentNavigation} />
         <Stack.Screen name="ChildN" component={ChildDrawerNavigation} />
@@ -34,6 +36,7 @@ const RouteNavigation = () => {
         <Stack.Screen name="MCQ" component={MCQ} />
         <Stack.Screen name="Match" component={Match} />
         <Stack.Screen name="Result" component={Result} />
+        <Stack.Screen name="Notification" component={Notifications} />
         <Stack.Screen name="Congratulation" component={Congratulation} />
         <Stack.Screen name="GameOver" component={GameOver} />
         <Stack.Screen name="Answers" component={Answers} />

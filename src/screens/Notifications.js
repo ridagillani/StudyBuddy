@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import Notification from "../components/Notification";
 
-const Notifications = () => {
+const Notifications = ({ navigation }) => {
   console;
   return (
     <View>
@@ -21,13 +21,8 @@ const Notifications = () => {
         style={styles.background}
       >
         <View style={styles.iconsCont}>
-          <TouchableOpacity>
-            <Image
-              style={styles.icon}
-              source={require("../assets/icons/Menu-right.png")}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity>
+          <View style={styles.icon}></View>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
             <Image
               style={styles.icon}
               source={require("../assets/icons/Notification-red.png")}
@@ -63,8 +58,8 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   icon: {
-    height: 40,
-    width: 40,
+    height: 50,
+    width: 50,
     paddingRight: 20,
   },
   notificationCont: {

@@ -21,7 +21,8 @@ const Help5 = ({ navigation }) => {
   return (
     <ImageBackground
       source={require("../assets/blurBackground.png")}
-      style={{ flex: 1 }}>
+      style={{ flex: 1 }}
+    >
       <Text style={styles.question}>
         Q1. Identify the Bird and Write it’s spellings.
       </Text>
@@ -37,7 +38,10 @@ const Help5 = ({ navigation }) => {
       </View>
 
       <View style={styles.subContainer}>
-        <TouchableOpacity onPress={() => navigation.goBack()} style={{marginLeft: windowWidth * 0.1}}>
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={{ marginLeft: windowWidth * 0.1 }}
+        >
           <Icon name="arrow-back-ios" size={30} color={"#E4680B"} />
         </TouchableOpacity>
 
@@ -51,7 +55,7 @@ const Help5 = ({ navigation }) => {
           text={"Home"}
           paddingHorizontal={windowWidth * 0.1}
           borderRadius={windowWidth * 0.1}
-          onPress={() => navigation.replace("Main", { screen: "Home" })}
+          onPress={() => navigation.replace("ChildN", { screen: "Home" })}
         />
       </View>
     </ImageBackground>
@@ -89,7 +93,7 @@ const styles = StyleSheet.create({
     fontSize: windowWidth * 0.056,
     fontFamily: "Poppins-Medium",
     marginLeft: windowWidth * 0.05,
-	width: windowWidth * 0.73
+    width: windowWidth * 0.73,
   },
   subContainer: {
     flexDirection: "row",
