@@ -16,6 +16,16 @@ import ChallengeButton from "../components/ChalllengeButton";
 
 const Challenges = ({ navigation }) => {
   const [Cstate, setCstate] = useState(1);
+
+  const handlePress = () => {
+    if (Cstate === 1) {
+      navigation.navigate("MCQ");
+    } else if (Cstate === 2) {
+      navigation.navigate("Match");
+    } else if (Cstate === 3) {
+      navigation.navigate("Identify");
+    }
+  };
   return (
     <View>
       <ImageBackground
@@ -58,7 +68,6 @@ const Challenges = ({ navigation }) => {
             fontFamily: "Poppins-Medium",
             color: "#E4680B",
             alignSelf: "center",
-            marginBottom: 20,
           }}
         >
           Birds
@@ -114,7 +123,7 @@ const Challenges = ({ navigation }) => {
             height: "35%",
           }}
         >
-          <Pressable>
+          <Pressable onPress={handlePress}>
             <View
               style={{
                 width: 230,
@@ -159,8 +168,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   icon: {
-    height: 40,
-    width: 40,
+    height: 50,
+    width: 50,
     paddingRight: 20,
   },
   container: {

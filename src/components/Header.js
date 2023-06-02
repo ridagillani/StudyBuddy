@@ -25,7 +25,8 @@ const Header = ({ color, navigation, option, onButtonPress }) => {
             onPress={() =>
               navigation.navigate("Main", { screen: "Notifications" })
             }
-            style={styles.counter}>
+            style={styles.counter}
+          >
             <Image
               source={require("../assets/icons/notification_icon.png")}
               style={styles.image}
