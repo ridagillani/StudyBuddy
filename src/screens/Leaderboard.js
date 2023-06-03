@@ -28,7 +28,7 @@ const Leaderboard = ({ navigation }) => {
             marginLeft: 10,
           }}
         >
-          <Pressable>
+          <Pressable onPress={() => navigation.goBack()}>
             <Image
               style={{ height: 25, width: 25 }}
               source={require("../assets/icons/back.png")}

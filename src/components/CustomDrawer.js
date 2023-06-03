@@ -21,15 +21,15 @@ function CustomDrawer(props) {
   const styles = StyleSheet.create({
     user: {
       flexDirection: "row",
-      alignContent: "center",
       alignItems: "center",
-      marginVertical: 20,
+      alignSelf: "center",
+      marginVertical: 30,
       paddingLeft: routeName === "Home" ? 10 : 25,
     },
     cp: {
       fontFamily: "Poppins-Medium",
       color: "#E4680B",
-      fontSize: 21,
+      fontSize: 18,
       marginLeft: 15,
       width: width * 0.4,
       marginRight: width * 0.02,

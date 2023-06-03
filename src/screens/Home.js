@@ -28,7 +28,7 @@ const Home = ({ navigation }) => {
               source={require("../assets/icons/Menu-right.png")}
             />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("Notification")}>
             <Image
               style={styles.icon}
               source={require("../assets/icons/Notification-red.png")}
@@ -48,7 +48,14 @@ const Home = ({ navigation }) => {
         </View>
 
         <ScrollView>
-          <Categories text1={"Birds"} pic1={1} text2={"Animals"} pic2={2} />
+          <Categories
+            text1={"Birds"}
+            pic1={1}
+            text2={"Animals"}
+            pic2={2}
+            onpress1={() => navigation.navigate("Challenges")}
+            onpress2={() => navigation.navigate("Challenges")}
+          />
           <Categories text1={"Flowers"} pic1={3} text2={"Fruits"} pic2={4} />
           <Categories text1={"Vegetables"} pic1={5} text2={"Maths"} pic2={6} />
         </ScrollView>
@@ -81,8 +88,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   icon: {
-    height: 40,
-    width: 40,
+    width: 50,
+    height: 50,
     paddingRight: 20,
   },
   container: {

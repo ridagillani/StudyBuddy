@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, Pressable } from "react-native";
 
-const Categories = ({ text1, text2, pic1, pic2, onpress }) => {
+const Categories = ({ text1, text2, pic1, pic2, onpress1, onpress2 }) => {
   const styles = StyleSheet.create({
     Lcategory: {
       height: 160,
@@ -42,7 +42,7 @@ const Categories = ({ text1, text2, pic1, pic2, onpress }) => {
 
   return (
     <View style={styles.container}>
-      <Pressable>
+      <Pressable onPress={onpress1}>
         <View style={styles.Lcategory}>
           {pic1 === 1 ? (
             <Image
@@ -64,7 +64,7 @@ const Categories = ({ text1, text2, pic1, pic2, onpress }) => {
         </View>
       </Pressable>
 
-      <Pressable>
+      <Pressable onPress={onpress2}>
         <View style={styles.Rcategory}>
           {pic2 === 2 ? (
             <Image

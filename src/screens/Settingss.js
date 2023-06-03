@@ -9,7 +9,7 @@ import {
   View,
   Image,
 } from "react-native";
-const Settingss = () => {
+const Settingss = ({ navigation }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
@@ -29,7 +29,7 @@ const Settingss = () => {
           justifyContent: "space-between",
         }}
       >
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image
             style={{ width: 20, height: 20 }}
             source={require("../assets/back.png")}
