@@ -26,7 +26,8 @@ const ChildProgress = ({ navigation }) => {
         <TouchableOpacity
           style={{
             paddingTop: 10,
-            paddingLeft: 15,
+            marginLeft: 10,
+            width: 40,
           }}
           onPress={() => navigation.openDrawer()}
         >
