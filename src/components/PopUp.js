@@ -1,14 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 
-import Profiles from "../screens/Profiles";
-const PopUp = ({
-  illustration,
-  message,
-  sub,
-  navigation = new useNavigation(),
-}) => {
+const PopUp = ({ illustration, message, sub, navigation }) => {
   return (
     <View style={{ justifyContent: "center", flex: 1 }}>
       <View style={styles.card}>

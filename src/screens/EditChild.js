@@ -75,6 +75,7 @@ const EditChild = ({ navigation }) => {
             illustration={1}
             message={"Child Edited"}
             sub={"Learn Faster, Grow Smarter!"}
+            navigation={navigation}
           ></PopUp>
         </Modal>
       </View>

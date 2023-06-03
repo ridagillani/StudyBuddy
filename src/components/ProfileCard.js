@@ -58,6 +58,7 @@ const ProfileCard = ({ name, password, navigation }) => {
             illustration={3}
             message={"Child Deleted"}
             sub={"They must've grown up!"}
+            navigation={navigation}
           ></PopUp>
         </Modal>
       </View>

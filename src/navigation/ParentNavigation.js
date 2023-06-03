@@ -17,7 +17,6 @@ const ParentNavigation = () => {
       <Stack.Screen name="Drawer" component={DrawerNavigation} />
       <Stack.Screen name="AddChild" component={AddChild} />
       <Stack.Screen name="EditChild" component={EditChild} />
-      <Stack.Screen name="PopUp" component={PopUp} />
     </Stack.Navigator>
   );
 };

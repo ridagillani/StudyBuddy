@@ -76,6 +76,7 @@ const AddChild = ({ navigation }) => {
             illustration={1}
             message={"Child Added"}
             sub={"Learn Faster, Grow Smarter!"}
+            navigation={navigation}
           ></PopUp>
         </Modal>
       </View>
