@@ -1,10 +1,23 @@
 import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
-const PopUp = ({ illustration, message, sub }) => {
+import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
+import Profiles from "../screens/Profiles";
+const PopUp = ({
+  illustration,
+  message,
+  sub,
+  navigation = new useNavigation(),
+}) => {
   return (
     <View style={{ justifyContent: "center", flex: 1 }}>
       <View style={styles.card}>
-        <Image source={require("../assets/cross.png")} style={styles.cross} />
+        <TouchableOpacity
+          style={{ position: "absolute", top: 20, left: 20 }}
+          onPress={() => navigation.goBack()}
+        >
+          <Image source={require("../assets/cross.png")} style={styles.cross} />
+        </TouchableOpacity>
         <View
           style={{
             alignItems: "center",
@@ -70,8 +83,5 @@ const styles = StyleSheet.create({
   cross: {
     height: 18,
     width: 18,
-    position: "absolute",
-    top: 20,
-    left: 20,
   },
 });

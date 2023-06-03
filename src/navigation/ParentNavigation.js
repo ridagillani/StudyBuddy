@@ -2,8 +2,8 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AddChild from "../screens/AddChild";
 import EditChild from "../screens/EditChild";
-import ChildAdded from "../screens/ChildAdded";
 import DrawerNavigation from "./drawerNavigation";
+import PopUp from "../components/PopUp";
 
 const Stack = createNativeStackNavigator();
 
@@ -17,7 +17,7 @@ const ParentNavigation = () => {
       <Stack.Screen name="Drawer" component={DrawerNavigation} />
       <Stack.Screen name="AddChild" component={AddChild} />
       <Stack.Screen name="EditChild" component={EditChild} />
-      <Stack.Screen name="ChildAdded" component={ChildAdded} />
+      <Stack.Screen name="PopUp" component={PopUp} />
     </Stack.Navigator>
   );
 };

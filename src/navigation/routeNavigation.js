@@ -15,7 +15,6 @@ import Help4 from "../screens/Help4";
 import Help5 from "../screens/Help5";
 import AddChild from "../screens/AddChild";
 import EditChild from "../screens/EditChild";
-import ChildAdded from "../screens/ChildAdded";
 import DrawerNavigation from "./drawerNavigation";
 
 const Stack = createNativeStackNavigator();
@@ -26,7 +25,8 @@ const RouteNavigation = () => {
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
-        }}>
+        }}
+      >
         <Stack.Screen name="MainNavigation" component={MainNavigation} />
         <Stack.Screen name="Parent" component={ParentNavigation} />
         <Stack.Screen name="ChildN" component={ChildDrawerNavigation} />
