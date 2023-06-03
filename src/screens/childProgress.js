@@ -25,13 +25,13 @@ const ChildProgress = ({ navigation }) => {
       >
         <TouchableOpacity
           style={{
-            paddingTop: 15,
+            paddingTop: 10,
             paddingLeft: 15,
           }}
           onPress={() => navigation.openDrawer()}
         >
           <Image
-            style={{ width: 60, height: 60 }}
+            style={{ width: 37, height: 37 }}
             source={require("../assets/menu.png")}
           />
         </TouchableOpacity>
@@ -42,7 +42,7 @@ const ChildProgress = ({ navigation }) => {
             alignItems: "center",
             marginLeft: 35,
             marginRight: 15,
-            marginBottom: 35,
+            marginBottom: 20,
           }}
         >
           <Text style={styles.heading}>Progress{"\n"}Record</Text>
