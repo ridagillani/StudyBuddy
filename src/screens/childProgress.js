@@ -25,7 +25,6 @@ const ChildProgress = ({ navigation }) => {
       >
         <TouchableOpacity
           style={{
-            height: "4%",
             paddingTop: 15,
             paddingLeft: 15,
           }}

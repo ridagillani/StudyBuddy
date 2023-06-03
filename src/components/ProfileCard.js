@@ -1,7 +1,17 @@
-import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  Image,
+  Modal,
+} from "react-native";
+import PopUp from "../components/PopUp";
 
 const ProfileCard = ({ name, password, navigation }) => {
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
     <View style={styles.card}>
       <View style={styles.buttonssV}>
@@ -13,7 +23,7 @@ const ProfileCard = ({ name, password, navigation }) => {
               style={styles.buttonss}
             />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => setModalVisible(true)}>
             <Image
               source={require("../assets/delete.png")}
               style={styles.buttonss}
@@ -34,6 +44,22 @@ const ProfileCard = ({ name, password, navigation }) => {
         <TouchableOpacity>
           <Image source={require("../assets/eye.png")} style={styles.eye} />
         </TouchableOpacity>
+      </View>
+      <View>
+        <Modal
+          transparent={true}
+          animationType="slide"
+          visible={modalVisible}
+          onRequestClose={() => {
+            setModalVisible(!modalVisible);
+          }}
+        >
+          <PopUp
+            illustration={3}
+            message={"Child Deleted"}
+            sub={"They must've grown up!"}
+          ></PopUp>
+        </Modal>
       </View>
     </View>
   );

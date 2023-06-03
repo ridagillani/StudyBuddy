@@ -63,8 +63,9 @@ const AddChild = ({ navigation }) => {
         />
         <SmallButton onpress={() => setModalVisible(true)} text={"Submit"} />
       </View>
-      <View style={styles.centeredView}>
+      <View>
         <Modal
+          transparent={true}
           animationType="slide"
           visible={modalVisible}
           onRequestClose={() => {

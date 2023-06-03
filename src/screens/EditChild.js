@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import CustomInput from "../components/CustomInput";
 import SmallButton from "../components/SmallButton";
+import PopUp from "../components/PopUp";
 import {
   ImageBackground,
   StyleSheet,
   Text,
+  Modal,
   TouchableOpacity,
   View,
   Image,
@@ -14,6 +16,7 @@ const EditChild = ({ navigation }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setcPass] = useState("");
+  const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <ImageBackground
@@ -57,10 +60,23 @@ const EditChild = ({ navigation }) => {
           placeholder={"Confirm Password"}
           option={2}
         />
-        <SmallButton
-          onpress={() => navigation.navigate("Profiles")}
-          text={"Submit"}
-        />
+        <SmallButton onpress={() => setModalVisible(true)} text={"Update"} />
+      </View>
+      <View>
+        <Modal
+          transparent={true}
+          animationType="slide"
+          visible={modalVisible}
+          onRequestClose={() => {
+            setModalVisible(!modalVisible);
+          }}
+        >
+          <PopUp
+            illustration={1}
+            message={"Child Edited"}
+            sub={"Learn Faster, Grow Smarter!"}
+          ></PopUp>
+        </Modal>
       </View>
     </ImageBackground>
   );

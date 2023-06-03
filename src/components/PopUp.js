@@ -62,6 +62,11 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     alignSelf: "center",
     paddingHorizontal: 1,
+    shadowColor: "black",
+    shadowOffset: { width: 10, height: 15 },
+    shadowOpacity: 15,
+    shadowRadius: 5,
+    elevation: 80,
   },
   char: {
     height: 300,
