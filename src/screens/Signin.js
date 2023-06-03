@@ -5,18 +5,40 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
-  Alert
+  Alert,
 } from "react-native";
 import CustomInput from "../components/CustomInput";
 import ContinueWith from "../components/ContinueWith";
 import GoogleButton from "../components/GoogleButton";
 import SmallButton from "../components/SmallButton";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../../firebase";
 
 export default function Signin({ navigation }) {
-  const [username, setUsername] = React.useState("");
+  const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [user, setUser] = React.useState("");
+
+  const Login = () => {
+    console.log("radsad");
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        console.log("erer");
+        const user = userCredential.user;
+        navigation.navigate("MCQ");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorMessage);
+        Alert.alert(errorMessage);
+      });
+  };
 
   React.useEffect(() => {
     const getUser = async () => {
@@ -34,10 +56,10 @@ export default function Signin({ navigation }) {
   }, []);
 
   const handlePress = () => {
-    if (username === "") {
-      return Alert.alert("Please enter username");
+    if (email === "") {
+      return Alert.alert("Please enter email");
     } else if (password === "") {
-      return Alert.alert("Please enter username");
+      return Alert.alert("Please enter Password");
     } else if (user === "Child") {
       navigation.replace("ChildN", { screen: "Home" });
     } else {
@@ -51,7 +73,8 @@ export default function Signin({ navigation }) {
         style={styles.nav}
         onPress={() =>
           navigation.navigate("MainNavigation", { screen: "Welcome" })
-        }>
+        }
+      >
         <Image
           style={styles.Icon}
           source={require("../assets/icons/back.png")}
@@ -61,10 +84,10 @@ export default function Signin({ navigation }) {
       <Text style={styles.welcome}>Welcome!</Text>
 
       <CustomInput
-        value={username}
-        onChangeText={setUsername}
-        placeholder={"Username"}
-        option={1}
+        value={email}
+        onChangeText={setEmail}
+        placeholder={"Email"}
+        option={4}
       />
       <CustomInput
         value={password}
@@ -77,7 +100,7 @@ export default function Signin({ navigation }) {
         <Text style={styles.label}>Forgot Password?</Text>
       </TouchableOpacity>
 
-      <SmallButton text={"Sign in"} onpress={handlePress} />
+      <SmallButton text={"Sign in"} onpress={() => Login()} />
       <ContinueWith />
       <GoogleButton text={"Sign in with Google"} />
       {user === "Child" ? null : (
@@ -87,7 +110,8 @@ export default function Signin({ navigation }) {
             onPress={() =>
               navigation.navigate("MainNavigation", { screen: "Signup" })
             }
-            style={styles.signup}>
+            style={styles.signup}
+          >
             Sign up
           </Text>{" "}
           now

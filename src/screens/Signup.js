@@ -12,12 +12,33 @@ import CustomInput from "../components/CustomInput";
 import ContinueWith from "../components/ContinueWith";
 import GoogleButton from "../components/GoogleButton";
 import SmallButton from "../components/SmallButton";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../../firebase";
 
 export default function Signup({ navigation }) {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [cpass, setCpass] = React.useState("");
-  const [phone, setPhone] = React.useState("");
+  const [email, setEmail] = React.useState("");
+
+  const Login = () => {
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        console.log("erer");
+        const user = userCredential.user;
+        navigation.replace("Parent", { screeen: "Drawer" });
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorMessage);
+        Alert.alert(errorMessage);
+      });
+  };
 
   return (
     <ImageBackground source={require("../assets/bg.png")} style={{ flex: 1 }}>
@@ -39,10 +60,10 @@ export default function Signup({ navigation }) {
         option={1}
       />
       <CustomInput
-        value={phone}
-        onChangeText={setPhone}
-        placeholder={"Phone no."}
-        option={3}
+        value={email}
+        onChangeText={setEmail}
+        placeholder={"Email"}
+        option={4}
       />
       <CustomInput
         value={password}
@@ -59,10 +80,7 @@ export default function Signup({ navigation }) {
         secureTextEntry
       />
 
-      <SmallButton
-        text={"Sign up"}
-        onpress={() => navigation.replace("Parent", { screeen: "Drawer" })}
-      />
+      <SmallButton text={"Sign up"} onpress={() => Login()} />
       <ContinueWith />
       <GoogleButton text={"Sign up with Google"} />
       <Text style={styles.label2}>
