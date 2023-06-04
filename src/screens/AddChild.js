@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import firestore from "@react-native-firebase/firestore";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import {
   ImageBackground,
@@ -19,6 +20,25 @@ const AddChild = ({ navigation }) => {
   const [password, setPassword] = useState("");
   const [cpassword, setcPass] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
+
+  const addChild = async () => {
+    try {
+      if (password === cpassword && password !== "" && username !== "") {
+        const child = {
+          password,
+          username,
+        };
+        let childP = await AsyncStorage.getItem("childProfile");
+        childP = childP != null ? JSON.parse(childP) : []; //array
+        childP.push(child);
+        console.log(childP);
+        await AsyncStorage.setItem("childProfile", JSON.stringify(childP));
+        setModalVisible(true);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <ImageBackground
@@ -65,7 +85,7 @@ const AddChild = ({ navigation }) => {
           option={2}
           secureTextEntry
         />
-        <SmallButton onpress={() => setModalVisible(true)} text={"Submit"} />
+        <SmallButton onpress={addChild} text={"Submit"} />
       </View>
       <View>
         <Modal

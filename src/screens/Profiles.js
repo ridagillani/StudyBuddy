@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import firestore from "@react-native-firebase/firestore";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import {
   ImageBackground,
@@ -11,7 +12,26 @@ import {
   ScrollView,
 } from "react-native";
 import ProfileCard from "../components/ProfileCard";
+import { useIsFocused } from "@react-navigation/native";
+
 const Profiles = ({ navigation }) => {
+  const [profiles, setProfiles] = useState([]);
+  const isFocused = useIsFocused();
+
+  const getProfile = async () => {
+    try {
+      let childP = await AsyncStorage.getItem("childProfile");
+      childP = childP != null ? JSON.parse(childP) : [];
+      setProfiles(childP);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getProfile();
+  }, [isFocused]);
+
   return (
     <View>
       <ImageBackground
@@ -46,18 +66,15 @@ const Profiles = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <ScrollView>
-          <ProfileCard
-            name={"Muhammad Haseeb"}
-            password={"12345678"}
-            navigation={navigation}
-            secureTextEntry
-          />
-          <ProfileCard
-            name={"Muhammad Haseeb"}
-            password={"12345678"}
-            navigation={navigation}
-            secureTextEntry
-          />
+          {profiles.map((profile, index) => (
+            <ProfileCard
+              name={profile.username}
+              password={profile.password}
+              key={index}
+              navigation={navigation}
+              secureTextEntry
+            />
+          ))}
         </ScrollView>
       </ImageBackground>
     </View>

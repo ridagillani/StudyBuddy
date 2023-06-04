@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 import {
   StyleSheet,
   Text,
@@ -14,6 +16,19 @@ import Icon from "react-native-vector-icons/Ionicons";
 const ProfileCard = ({ name, password, navigation, secureTextEntry }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [show, setShow] = React.useState(secureTextEntry);
+  const deleteProfile = async () => {
+    try {
+      let childP = await AsyncStorage.getItem("childProfile");
+      childP = childP != null ? JSON.parse(childP) : []; //array
+      childP.pop();
+      //delete selected item from array
+      console.log(childP);
+      await AsyncStorage.setItem("childProfile", JSON.stringify(childP));
+      setModalVisible(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <View style={styles.card}>
@@ -26,7 +41,7 @@ const ProfileCard = ({ name, password, navigation, secureTextEntry }) => {
               style={styles.buttonss}
             />
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => setModalVisible(true)}>
+          <TouchableOpacity onPress={() => deleteProfile()}>
             <Image
               source={require("../assets/delete.png")}
               style={styles.buttonss}
