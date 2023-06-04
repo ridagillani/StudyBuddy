@@ -15,7 +15,7 @@ import QuestionAnswer from "../components/QuestionAnswer";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-const Answers = () => {
+const Answers = ({ navigation }) => {
   return (
     <ImageBackground
       source={require("../assets/Background.png")}
@@ -32,11 +32,8 @@ const Answers = () => {
       <ScrollView>
         <QuestionAnswer correct={1} />
         <QuestionAnswer correct={3} />
-        <QuestionAnswer correct={2} />
         <QuestionAnswer correct={4} />
         <QuestionAnswer correct={2} />
-        <QuestionAnswer correct={3} />
-        <QuestionAnswer correct={1} />
       </ScrollView>
     </ImageBackground>
   );

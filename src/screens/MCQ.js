@@ -8,19 +8,68 @@ import {
   Dimensions,
   TouchableOpacity,
   ScrollView,
+  Alert,
+  Modal,
 } from "react-native";
 import Header from "../components/Header";
 import CustomButton from "../components/Button";
 import CustomInput from "../components/CustomInput";
 import Lives from "../components/Lives";
 import McqParts from "../components/McqsParts";
+import { birdsData } from "../model/BirdsData";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import PopUp from "../components/PopUp";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 const MCQ = ({ navigation }) => {
-  const [current, setCurrent] = React.useState(false);
+  const [current, setCurrent] = React.useState(0);
+  const [screen, setScreen] = React.useState(1);
+  const [score, setScore] = React.useState(0);
+  const [object, setObject] = React.useState("");
+  const [modalVisible, setModalVisible] = React.useState(false);
 
+  React.useEffect(() => {
+    birdsData.map((item) => {
+      if (item.id === screen) {
+        setObject(item);
+      }
+    });
+  }, [screen]);
+
+  const incScore = () => {
+    if (current === 1 && object.name === "eagle") {
+      setScore(score + 1);
+    } else if (current === 2 && object.name === "crow") {
+      setScore(score + 1);
+    } else if (current === 3 && object.name === "pigeon") {
+      setScore(score + 1);
+    } else if (current === 4 && object.name === "sparrow") {
+      setScore(score + 1);
+    } else {
+      setModalVisible(true);
+    }
+  };
+
+  const handlePress = async () => {
+    if (current === 0) {
+      Alert.alert("Warning!", "Select an option");
+    } else {
+      incScore();
+      if (screen === 4) {
+        await AsyncStorage.setItem("score", JSON.stringify(score)).then(() => {
+          navigation.navigate("GameOver");
+          setScore(0);
+          setScreen(1);
+        });
+      } else {
+        setScreen(screen + 1);
+      }
+    }
+
+    setCurrent(0);
+  };
   return (
     <ImageBackground
       source={require("../assets/Background.png")}
@@ -30,17 +79,17 @@ const MCQ = ({ navigation }) => {
       <ScrollView>
         <Text style={styles.text}>Birds</Text>
 
-        <CustomButton text={`Score:  ${2}`} />
+        <CustomButton text={`Score:  ${score}`} />
 
         <Image
-          source={require("../assets/pigeon2.png")}
+          source={object ? object.image : require("../assets/Eagle.png")}
           style={styles.birdImage}
         />
 
         <CustomButton text={<Lives />} />
 
         <Text style={styles.question}>
-          Q3. What’s the name of the bird in this picture?
+          Q. What’s the name of the bird in this picture?
         </Text>
 
         <View style={styles.center}>
@@ -77,11 +126,26 @@ const MCQ = ({ navigation }) => {
 
         <View style={styles.submit}>
           <CustomButton
-            text={"Submit"}
+            text={screen === 4 ? "Submit" : "Next"}
             paddingHorizontal={windowWidth * 0.3}
-            onPress={() => navigation.navigate("GameOver")}
+            onPress={handlePress}
           />
         </View>
+        <Modal
+          transparent={true}
+          animationType="slide"
+          visible={modalVisible}
+          onRequestClose={() => {
+            setModalVisible(!modalVisible);
+          }}>
+          <PopUp
+            illustration={3}
+            message={"Wrong Answer"}
+            sub={"Wrong Answer! You lost a Life. Try Again."}
+            navigation={navigation}
+            onPress={() => setModalVisible(false)}
+          />
+        </Modal>
       </ScrollView>
     </ImageBackground>
   );

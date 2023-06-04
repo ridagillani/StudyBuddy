@@ -44,16 +44,14 @@ const AddChild = ({ navigation }) => {
     <ImageBackground
       source={require("../assets/backskin.png")}
       resizeMode="cover"
-      style={styles.background}
-    >
+      style={styles.background}>
       <View
         style={{
           flexDirection: "row",
           alignItems: "center",
           margin: 15,
           justifyContent: "space-between",
-        }}
-      >
+        }}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image
             style={{ width: 20, height: 20 }}
@@ -94,14 +92,12 @@ const AddChild = ({ navigation }) => {
           visible={modalVisible}
           onRequestClose={() => {
             setModalVisible(!modalVisible);
-          }}
-        >
+          }}>
           <PopUp
             illustration={1}
             message={"Child Added"}
             sub={"Learn Faster, Grow Smarter!"}
-            navigation={navigation}
-          ></PopUp>
+            navigation={navigation}></PopUp>
         </Modal>
       </View>
     </ImageBackground>

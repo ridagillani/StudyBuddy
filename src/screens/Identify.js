@@ -8,19 +8,63 @@ import {
   Dimensions,
   TouchableOpacity,
   ScrollView,
+  Modal,
+  Alert,
 } from "react-native";
 import Header from "../components/Header";
 import CustomButton from "../components/Button";
 import CustomInput from "../components/CustomInput";
 import Lives from "../components/Lives";
-// import Sound from "react-native-sound";
+import Sound from "react-native-sound";
+import { birdsData } from "../model/BirdsData";
+import PopUp from "../components/PopUp";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 const Identify = ({ navigation }) => {
   const [input, setInput] = React.useState("");
-  // const sound = new Sound("../assets/sound/eagle.mp3");
+  const [screen, setScreen] = React.useState(1);
+  const [score, setScore] = React.useState(0);
+  const [object, setObject] = React.useState("");
+  const [modalVisible, setModalVisible] = React.useState(false);
+  const sound = new Sound(object ? object.sound : "eagle.mp3");
+
+  React.useEffect(() => {
+    birdsData.map((item) => {
+      if (item.id === screen) {
+        setObject(item);
+      }
+    });
+  }, [screen]);
+
+  console.log(object, score);
+  const incScore = () => {
+    if (input !== "" && input.toLowerCase() === object.name) {
+      setScore(score + 1);
+    } else {
+      setModalVisible(true);
+    }
+  };
+
+  const handlePress = async () => {
+    if (!input) {
+      Alert.alert("Warning!", "Please enter the name of the bird");
+    } else {
+      incScore();
+      if (screen === 4) {
+        await AsyncStorage.setItem("score", JSON.stringify(score)).then(() => {
+          navigation.navigate("GameOver");
+          setScore(0);
+          setScreen(1);
+        });
+      } else {
+        setScreen(screen + 1);
+      }
+    }
+    setInput("");
+  };
 
   return (
     <ImageBackground
@@ -31,13 +75,18 @@ const Identify = ({ navigation }) => {
       <ScrollView>
         <Text style={styles.text}>Birds</Text>
 
-        <CustomButton text={`Score:  ${2}`} />
+        <CustomButton text={`Score:  ${score}`} />
 
         <Text style={styles.question}>
-          Q1. Identify the Bird and Write it’s spellings.
+          Q. Identify the Bird and Write it’s spellings.
         </Text>
         {/* sound.play() */}
-        <TouchableOpacity style={styles.hint} onPress={() => {}}>
+        <TouchableOpacity
+          style={styles.hint}
+          onPress={() => {
+            sound.play();
+            console.log("Hello");
+          }}>
           <Image
             source={require("../assets/icons/speaker.png")}
             style={styles.image}
@@ -46,7 +95,7 @@ const Identify = ({ navigation }) => {
         </TouchableOpacity>
 
         <Image
-          source={require("../assets/Eagle.png")}
+          source={object ? object.image : require("../assets/Eagle.png")}
           resizeMode="contain"
           style={styles.birdImage}
         />
@@ -61,11 +110,26 @@ const Identify = ({ navigation }) => {
 
         <View style={styles.submit}>
           <CustomButton
-            text={"Submit"}
+            text={screen === 4 ? "Submit" : "Next"}
             paddingHorizontal={windowWidth * 0.3}
-            onPress={() => navigation.navigate("Match")}
+            onPress={handlePress}
           />
         </View>
+        <Modal
+          transparent={true}
+          animationType="slide"
+          visible={modalVisible}
+          onRequestClose={() => {
+            setModalVisible(!modalVisible);
+          }}>
+          <PopUp
+            illustration={3}
+            message={"Wrong Answer"}
+            sub={"Wrong Answer! You lost a Life. Try Again."}
+            navigation={navigation}
+            onPress={() => setModalVisible(false)}
+          />
+        </Modal>
       </ScrollView>
     </ImageBackground>
   );

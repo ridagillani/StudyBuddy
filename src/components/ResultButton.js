@@ -31,6 +31,7 @@ const ResultButton = ({ text, uri, option, onPress, answer }) => {
           ? windowWidth * 0.055
           : windowWidth * 0.072,
       justifyContent: "center",
+      alignItems: "center",
     },
     image: {
       width: option === 1 ? windowWidth * 0.095 : windowWidth * 0.12,

@@ -87,7 +87,7 @@ function CustomDrawer(props) {
             marginLeft: -20,
           }}
           onPress={() =>
-            props.navigation.replace("MainNavigation", { screen: "Signin" })
+            props.navigation.replace("MainNavigation", { screen: "Welcome" })
           }
         />
       </DrawerContentScrollView>

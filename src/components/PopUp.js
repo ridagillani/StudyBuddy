@@ -1,14 +1,13 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
-const PopUp = ({ illustration, message, sub, navigation }) => {
+const PopUp = ({ illustration, message, sub, navigation, onPress }) => {
   return (
     <View style={{ justifyContent: "center", flex: 1 }}>
       <View style={styles.card}>
         <TouchableOpacity
-          style={{ position: "absolute", top: 20, left: 20 }}
-          onPress={() => navigation.goBack()}
-        >
+          style={{ marginTop: 5, marginLeft: 20 }}
+          onPress={onPress ? onPress : () => navigation.goBack()}>
           <Image source={require("../assets/cross.png")} style={styles.cross} />
         </TouchableOpacity>
         <View
@@ -16,9 +15,8 @@ const PopUp = ({ illustration, message, sub, navigation }) => {
             alignItems: "center",
             alignSelf: "center",
             justifyContent: "center",
-            marginTop: 35,
-          }}
-        >
+            marginTop: 15,
+          }}>
           <Text style={styles.header}>{message}</Text>
           <Text style={styles.subH}>{sub}</Text>
           {/* <Image
@@ -77,6 +75,7 @@ const styles = StyleSheet.create({
     color: "#E4680B",
     textAlign: "center",
     fontSize: 13,
+    width: 200,
   },
   cross: {
     height: 18,

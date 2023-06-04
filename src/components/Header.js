@@ -22,11 +22,8 @@ const Header = ({ color, navigation, option, onButtonPress }) => {
       <View style={styles.row}>
         <View style={{ marginRight: windowWidth * 0.02 }}>
           <TouchableOpacity
-            onPress={() =>
-              navigation.navigate("Main", { screen: "Notifications" })
-            }
-            style={styles.counter}
-          >
+            onPress={() => navigation.navigate("Notifications")}
+            style={styles.counter}>
             <Image
               source={require("../assets/icons/notification_icon.png")}
               style={styles.image}

@@ -12,20 +12,16 @@ import McqParts from "./McqsParts";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-const QuestionAnswer = ({correct}) => {
-
+const QuestionAnswer = ({ correct }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
-        Q1. What’s the name of the bird in this picture?
+        Q. What’s the name of the bird in this picture?
       </Text>
 
       <View style={styles.center}>
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-          <McqParts
-            text={"Eagle"}
-            correct={correct === 1 ? true : false}
-          />
+          <McqParts text={"Eagle"} correct={correct === 1 ? true : false} />
           <McqParts
             text={"Crow"}
             option
@@ -34,10 +30,7 @@ const QuestionAnswer = ({correct}) => {
         </View>
 
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-          <McqParts
-            text={"Pigeon"}
-            correct={correct === 3 ? true : false}
-          />
+          <McqParts text={"Pigeon"} correct={correct === 3 ? true : false} />
           <McqParts
             text={"Sparrow"}
             option

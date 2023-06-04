@@ -10,16 +10,25 @@ import {
   ScrollView,
 } from "react-native";
 import ResultButton from "../components/ResultButton";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 const GameOver = ({ navigation }) => {
+  const [score, setScore] = React.useState(0);
+  React.useEffect(() => {
+    const getScore = async () => {
+      const s = await AsyncStorage.getItem("score");
+      setScore(parseInt(s));
+    };
+    getScore();
+  }, []);
   return (
     <View style={styles.container}>
       <View style={styles.centerText}>
         <Text style={styles.text}>Tough Luck</Text>
-        <Text style={styles.subText}>Your Score is: 12</Text>
+        <Text style={styles.subText}>Your Score is: {score}</Text>
         <Image source={require("../assets/over.png")} style={styles.image} />
       </View>
       <View style={[styles.card]}>
@@ -28,14 +37,14 @@ const GameOver = ({ navigation }) => {
           text={"Home"}
           option
           onPress={() => {
-            navigation.replace("Main", { screen: "Home" });
+            navigation.replace("ChildN", { screen: "Home" });
           }}
         />
         <ResultButton
           uri={require("../assets/icons/retryWhite.png")}
           text={"Retry"}
           option
-          onPress={() => {}}
+          onPress={() => navigation.replace("ChildN", { screen: "Challenges" })}
         />
         <ResultButton
           uri={require("../assets/icons/menuWhite.png")}

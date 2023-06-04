@@ -13,9 +13,26 @@ import {
 import Categories from "../components/Categories";
 import HighScore from "../components/HighScore";
 import ChallengeButton from "../components/ChalllengeButton";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Challenges = ({ navigation }) => {
   const [Cstate, setCstate] = useState(1);
+  const [score, setScore] = React.useState(0);
+
+  React.useEffect(() => {
+    const getUser = async () => {
+      try {
+        const s = await AsyncStorage.getItem("score");
+        if (s) {
+          setScore(parseInt(s));
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getUser();
+  }, [navigation]);
 
   const handlePress = () => {
     if (Cstate === 1) {
@@ -31,16 +48,14 @@ const Challenges = ({ navigation }) => {
       <ImageBackground
         source={require("../assets/challenges.png")}
         resizeMode="cover"
-        style={styles.background}
-      >
+        style={styles.background}>
         <View
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
             marginTop: 20,
             marginLeft: 10,
-          }}
-        >
+          }}>
           <Pressable onPress={() => navigation.goBack()}>
             <Image
               style={{ height: 25, width: 25 }}
@@ -68,8 +83,7 @@ const Challenges = ({ navigation }) => {
             fontFamily: "Poppins-Medium",
             color: "#E4680B",
             alignSelf: "center",
-          }}
-        >
+          }}>
           Birds
         </Text>
         <Text
@@ -80,8 +94,7 @@ const Challenges = ({ navigation }) => {
             alignSelf: "center",
             marginBottom: 10,
             fontWeight: "500",
-          }}
-        >
+          }}>
           Challenge
         </Text>
 
@@ -97,8 +110,7 @@ const Challenges = ({ navigation }) => {
             shadowRadius: 5,
             elevation: 8,
             marginBottom: 30,
-          }}
-        >
+          }}>
           <ChallengeButton
             text={"MCQ's"}
             onpress={() => setCstate(1)}
@@ -115,14 +127,13 @@ const Challenges = ({ navigation }) => {
             state={Cstate === 3 ? true : false}
           />
         </View>
-        <HighScore score={"24"} />
+        <HighScore score={score} />
         <View
           style={{
             flexDirection: "column-reverse",
             width: "100%",
             height: "35%",
-          }}
-        >
+          }}>
           <Pressable onPress={handlePress}>
             <View
               style={{
@@ -133,8 +144,7 @@ const Challenges = ({ navigation }) => {
                 alignItems: "center",
                 justifyContent: "center",
                 alignSelf: "center",
-              }}
-            >
+              }}>
               <Text style={{ fontSize: 16 }}>Start</Text>
             </View>
           </Pressable>

@@ -24,12 +24,12 @@ export default function Signin({ navigation }) {
   const [user, setUser] = React.useState("");
 
   const Login = () => {
-    console.log("radsad");
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
-        console.log("erer");
-        const user = userCredential.user;
+        // console.log("erer");
+        // const user = userCredential.user;
+        // console.log(userCredential)
         // navigation.navigate("ChildN");
         if (user === "Child") {
           navigation.replace("ChildN", { screen: "Home" });
@@ -59,7 +59,7 @@ export default function Signin({ navigation }) {
     };
 
     getUser();
-  }, []);
+  }, [navigation]);
 
   const handlePress = () => {
     if (email === "") {
@@ -79,8 +79,7 @@ export default function Signin({ navigation }) {
         style={styles.nav}
         onPress={() =>
           navigation.navigate("MainNavigation", { screen: "Welcome" })
-        }
-      >
+        }>
         <Image
           style={styles.Icon}
           source={require("../assets/icons/back.png")}
@@ -116,8 +115,7 @@ export default function Signin({ navigation }) {
             onPress={() =>
               navigation.navigate("MainNavigation", { screen: "Signup" })
             }
-            style={styles.signup}
-          >
+            style={styles.signup}>
             Sign up
           </Text>{" "}
           now
