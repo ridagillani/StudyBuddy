@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import firestore from "@react-native-firebase/firestore";
+
 import {
   ImageBackground,
   StyleSheet,

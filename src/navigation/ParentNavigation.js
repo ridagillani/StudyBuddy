@@ -3,7 +3,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AddChild from "../screens/AddChild";
 import EditChild from "../screens/EditChild";
 import DrawerNavigation from "./drawerNavigation";
-import PopUp from "../components/PopUp";
 
 const Stack = createNativeStackNavigator();
 

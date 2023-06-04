@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import CustomInput from "../components/CustomInput";
 import SmallButton from "../components/SmallButton";
 import PopUp from "../components/PopUp";
+import firestore from "@react-native-firebase/firestore";
+
 import {
   ImageBackground,
   StyleSheet,
