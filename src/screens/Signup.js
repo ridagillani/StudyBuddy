@@ -24,19 +24,15 @@ export default function Signup({ navigation }) {
   const [cpass, setCpass] = React.useState("");
   const [email, setEmail] = React.useState("");
 
-  const Login = () => {
+  const Signup = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
-        console.log("erer");
         const user = userCredential.user;
-        navigation.replace("Parent", { screeen: "Drawer" });
+        navigation.navigate("Signin");
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorMessage);
-        Alert.alert(errorMessage);
+        Alert.alert("Please Fill Fields Properly");
       });
   };
 
@@ -80,7 +76,7 @@ export default function Signup({ navigation }) {
         secureTextEntry
       />
 
-      <SmallButton text={"Sign up"} onpress={() => Login()} />
+      <SmallButton text={"Sign up"} onpress={() => Signup()} />
       <ContinueWith />
       <GoogleButton text={"Sign up with Google"} />
       <Text style={styles.label2}>

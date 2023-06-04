@@ -56,12 +56,14 @@ const AddChild = ({ navigation }) => {
           onChangeText={setPassword}
           placeholder={"Password"}
           option={2}
+          secureTextEntry
         />
         <CustomInput
           value={cpassword}
           onChangeText={setcPass}
           placeholder={"Confirm Password"}
           option={2}
+          secureTextEntry
         />
         <SmallButton onpress={() => setModalVisible(true)} text={"Submit"} />
       </View>

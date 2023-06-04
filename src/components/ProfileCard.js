@@ -9,8 +9,11 @@ import {
 } from "react-native";
 import PopUp from "../components/PopUp";
 
-const ProfileCard = ({ name, password, navigation }) => {
+import Icon from "react-native-vector-icons/Ionicons";
+
+const ProfileCard = ({ name, password, navigation, secureTextEntry }) => {
   const [modalVisible, setModalVisible] = useState(false);
+  const [show, setShow] = React.useState(secureTextEntry);
 
   return (
     <View style={styles.card}>
@@ -34,15 +37,27 @@ const ProfileCard = ({ name, password, navigation }) => {
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "flex-start",
+          justifyContent: "space-between",
           alignItems: "center",
           marginHorizontal: 20,
           marginBottom: 15,
         }}
       >
-        <Text style={styles.password}>Password: {password}</Text>
-        <TouchableOpacity>
-          <Image source={require("../assets/eye.png")} style={styles.eye} />
+        {show ? (
+          <Text style={styles.password}>Password: {password}</Text>
+        ) : (
+          <Text style={styles.password}>Password: ******</Text>
+        )}
+        <TouchableOpacity onPress={() => setShow(!show)}>
+          {/* <Image source={require("../assets/eye.png")} style={styles.eye} /> */}
+          {show ? (
+            <Image
+              style={{ width: 20, height: 13 }}
+              source={require("../assets/icons/eye.png")}
+            />
+          ) : (
+            <Icon name="eye-off" color="#E4680B" size={20} />
+          )}
         </TouchableOpacity>
       </View>
       <View>

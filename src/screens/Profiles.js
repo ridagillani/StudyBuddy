@@ -50,11 +50,13 @@ const Profiles = ({ navigation }) => {
             name={"Muhammad Haseeb"}
             password={"12345678"}
             navigation={navigation}
+            secureTextEntry
           />
           <ProfileCard
             name={"Muhammad Haseeb"}
             password={"12345678"}
             navigation={navigation}
+            secureTextEntry
           />
         </ScrollView>
       </ImageBackground>
@@ -77,19 +79,20 @@ const styles = StyleSheet.create({
     color: "#FFEEC2",
     textAlign: "center",
     paddingHorizontal: 20,
+    fontSize: 14,
   },
   cp: {
     fontFamily: "Poppins-Regular",
     color: "#E4680B",
     fontSize: 22,
-    marginRight: 100,
+    marginRight: 80,
   },
   headings: {
     marginVertical: 5,
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    marginHorizontal: 20,
+    // marginHorizontal: 20,
   },
   header: {
     marginTop: 10,
