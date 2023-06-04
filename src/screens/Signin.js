@@ -30,13 +30,19 @@ export default function Signin({ navigation }) {
         // Signed in
         console.log("erer");
         const user = userCredential.user;
-        navigation.navigate("MCQ");
+        // navigation.navigate("ChildN");
+        if (user === "Child") {
+          navigation.replace("ChildN", { screen: "Home" });
+        } else {
+          navigation.replace("Parent", { screeen: "Drawer" });
+        }
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorMessage);
-        Alert.alert(errorMessage);
+        // const errorCode = error.code;
+        // const errorMessage = error.message;
+        // console.log(errorMessage);
+        // Alert.alert(errorMessage);
+        Alert.alert("Please enter Right Credentials");
       });
   };
 
