@@ -7,7 +7,11 @@ import {
   StyleSheet,
   TouchableOpacity,
   TextInput,
+<<<<<<< Updated upstream
   Alert
+=======
+  Alert,
+>>>>>>> Stashed changes
 } from "react-native";
 import CustomInput from "../components/CustomInput";
 import ContinueWith from "../components/ContinueWith";
