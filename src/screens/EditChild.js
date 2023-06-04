@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CustomInput from "../components/CustomInput";
 import SmallButton from "../components/SmallButton";
 import PopUp from "../components/PopUp";
 import firestore from "@react-native-firebase/firestore";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 import {
   ImageBackground,
@@ -14,11 +15,49 @@ import {
   Image,
 } from "react-native";
 
-const EditChild = ({ navigation }) => {
+const EditChild = ({ navigation, route }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setcPass] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
+
+  const { index } = route.params;
+
+  const getChild = async () => {
+    try {
+      let childP = await AsyncStorage.getItem("childProfile");
+      childP = childP != null ? JSON.parse(childP) : [];
+      const child = childP[index];
+      setUsername(child.username);
+      setPassword(child.password);
+      setcPass(child.password);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const editChild = async () => {
+    try {
+      if (password === cpassword && password !== "" && username !== "") {
+        const child = {
+          password,
+          username,
+        };
+        let childP = await AsyncStorage.getItem("childProfile");
+        childP = childP != null ? JSON.parse(childP) : []; //array
+        childP[index] = child;
+        console.log(childP);
+        await AsyncStorage.setItem("childProfile", JSON.stringify(childP));
+        setModalVisible(true);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    getChild();
+  }, [index]);
 
   return (
     <ImageBackground
@@ -64,7 +103,7 @@ const EditChild = ({ navigation }) => {
           option={2}
           secureTextEntry
         />
-        <SmallButton onpress={() => setModalVisible(true)} text={"Update"} />
+        <SmallButton onpress={editChild} text={"Update"} />
       </View>
       <View>
         <Modal

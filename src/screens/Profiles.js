@@ -73,6 +73,7 @@ const Profiles = ({ navigation }) => {
               key={index}
               navigation={navigation}
               secureTextEntry
+              index={index}
             />
           ))}
         </ScrollView>

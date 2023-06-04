@@ -13,14 +13,20 @@ import PopUp from "../components/PopUp";
 
 import Icon from "react-native-vector-icons/Ionicons";
 
-const ProfileCard = ({ name, password, navigation, secureTextEntry }) => {
+const ProfileCard = ({
+  name,
+  password,
+  navigation,
+  secureTextEntry,
+  index,
+}) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [show, setShow] = React.useState(secureTextEntry);
   const deleteProfile = async () => {
     try {
       let childP = await AsyncStorage.getItem("childProfile");
       childP = childP != null ? JSON.parse(childP) : []; //array
-      childP.pop();
+      childP.splice(index, 1);
       //delete selected item from array
       console.log(childP);
       await AsyncStorage.setItem("childProfile", JSON.stringify(childP));
@@ -35,7 +41,9 @@ const ProfileCard = ({ name, password, navigation, secureTextEntry }) => {
       <View style={styles.buttonssV}>
         <Text style={styles.name}>{name}</Text>
         <View style={{ flexDirection: "row" }}>
-          <TouchableOpacity onPress={() => navigation.navigate("EditChild")}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("EditChild", { index })}
+          >
             <Image
               source={require("../assets/edit.png")}
               style={styles.buttonss}

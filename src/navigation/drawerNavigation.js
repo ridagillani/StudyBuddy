@@ -26,8 +26,8 @@ const DrawerNavigation = () => {
           fontSize: 16,
           marginLeft: -20,
         },
-       
-      }}>
+      }}
+    >
       <Drawer.Screen
         name="ChildProgress"
         component={ChildProgress}
@@ -36,7 +36,7 @@ const DrawerNavigation = () => {
         }}
       />
       <Drawer.Screen
-        name="Profile"
+        name="Profiles"
         component={Profiles}
         options={{
           drawerIcon: () => (
