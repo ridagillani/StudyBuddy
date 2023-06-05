@@ -67,9 +67,9 @@ const ProfileCard = ({
         }}
       >
         {show ? (
-          <Text style={styles.password}>Password: {password}</Text>
-        ) : (
           <Text style={styles.password}>Password: ******</Text>
+        ) : (
+          <Text style={styles.password}>Password: {password}</Text>
         )}
         <TouchableOpacity onPress={() => setShow(!show)}>
           {/* <Image source={require("../assets/eye.png")} style={styles.eye} /> */}

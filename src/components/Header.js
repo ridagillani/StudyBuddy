@@ -12,44 +12,47 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-const Header = ({ color, navigation, option, onButtonPress }) => {
+const Header = ({ color, navigation, option, onButtonPress, show }) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={() => navigation.goBack()}>
         <Icon name="arrow-back-ios" size={30} color={color} />
       </TouchableOpacity>
 
-      <View style={styles.row}>
-        <View style={{ marginRight: windowWidth * 0.02 }}>
-          <TouchableOpacity
-            onPress={() => navigation.navigate("Notifications")}
-            style={styles.counter}>
-            <Image
-              source={require("../assets/icons/notification_icon.png")}
-              style={styles.image}
-            />
-          </TouchableOpacity>
-        </View>
+      {show ? null : (
+        <View style={styles.row}>
+          <View style={{ marginRight: windowWidth * 0.02 }}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("Notification")}
+              style={styles.counter}
+            >
+              <Image
+                source={require("../assets/icons/notification_icon.png")}
+                style={styles.image}
+              />
+            </TouchableOpacity>
+          </View>
 
-        <View>
-          <TouchableOpacity onPress={onButtonPress} style={styles.counter}>
-            {option ? (
-              <Image
-                source={require("../assets/icons/menu-lines.png")}
-                style={{
-                  width: windowWidth * 0.045,
-                  height: windowHeight * 0.018,
-                }}
-              />
-            ) : (
-              <Image
-                source={require("../assets/icons/settings.png")}
-                style={[styles.image, { height: windowHeight * 0.028 }]}
-              />
-            )}
-          </TouchableOpacity>
+          <View>
+            <TouchableOpacity onPress={onButtonPress} style={styles.counter}>
+              {option ? (
+                <Image
+                  source={require("../assets/icons/menu-lines.png")}
+                  style={{
+                    width: windowWidth * 0.045,
+                    height: windowHeight * 0.018,
+                  }}
+                />
+              ) : (
+                <Image
+                  source={require("../assets/icons/settings.png")}
+                  style={[styles.image, { height: windowHeight * 0.028 }]}
+                />
+              )}
+            </TouchableOpacity>
+          </View>
         </View>
-      </View>
+      )}
     </View>
   );
 };

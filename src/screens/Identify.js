@@ -69,8 +69,9 @@ const Identify = ({ navigation }) => {
   return (
     <ImageBackground
       source={require("../assets/Background.png")}
-      style={styles.container}>
-      <Header color={"#E4680B"} navigation={navigation} />
+      style={styles.container}
+    >
+      <Header color={"#E4680B"} navigation={navigation} show />
 
       <ScrollView>
         <Text style={styles.text}>Birds</Text>
@@ -86,7 +87,8 @@ const Identify = ({ navigation }) => {
           onPress={() => {
             sound.play();
             console.log("Hello");
-          }}>
+          }}
+        >
           <Image
             source={require("../assets/icons/speaker.png")}
             style={styles.image}
@@ -121,7 +123,8 @@ const Identify = ({ navigation }) => {
           visible={modalVisible}
           onRequestClose={() => {
             setModalVisible(!modalVisible);
-          }}>
+          }}
+        >
           <PopUp
             illustration={3}
             message={"Wrong Answer"}

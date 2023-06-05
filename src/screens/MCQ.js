@@ -73,8 +73,9 @@ const MCQ = ({ navigation }) => {
   return (
     <ImageBackground
       source={require("../assets/Background.png")}
-      style={styles.container}>
-      <Header color={"#E4680B"} navigation={navigation} />
+      style={styles.container}
+    >
+      <Header color={"#E4680B"} navigation={navigation} show />
 
       <ScrollView>
         <Text style={styles.text}>Birds</Text>
@@ -94,7 +95,8 @@ const MCQ = ({ navigation }) => {
 
         <View style={styles.center}>
           <View
-            style={{ flexDirection: "row", justifyContent: "space-between" }}>
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
             <McqParts
               text={"Eagle"}
               current={current === 1 ? true : false}
@@ -109,7 +111,8 @@ const MCQ = ({ navigation }) => {
           </View>
 
           <View
-            style={{ flexDirection: "row", justifyContent: "space-between" }}>
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
             <McqParts
               text={"Pigeon"}
               current={current === 3 ? true : false}
@@ -137,7 +140,8 @@ const MCQ = ({ navigation }) => {
           visible={modalVisible}
           onRequestClose={() => {
             setModalVisible(!modalVisible);
-          }}>
+          }}
+        >
           <PopUp
             illustration={3}
             message={"Wrong Answer"}

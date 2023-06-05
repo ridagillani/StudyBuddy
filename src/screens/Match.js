@@ -22,8 +22,9 @@ const Match = ({ navigation }) => {
   return (
     <ImageBackground
       source={require("../assets/Background.png")}
-      style={styles.container}>
-      <Header color={"#E4680B"} navigation={navigation}/>
+      style={styles.container}
+    >
+      <Header color={"#E4680B"} navigation={navigation} show />
 
       <ScrollView>
         <Text style={styles.text}>Birds</Text>
@@ -42,7 +43,7 @@ const Match = ({ navigation }) => {
           <CustomButton
             text={"Submit"}
             paddingHorizontal={windowWidth * 0.3}
-            onPress={() => navigation.navigate("MCQ")}
+            onPress={() => navigation.navigate("GameOver")}
           />
         </View>
       </ScrollView>

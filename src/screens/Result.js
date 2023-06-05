@@ -29,8 +29,9 @@ const Result = ({ navigation }) => {
   return (
     <ImageBackground
       source={require("../assets/bg.png")}
-      style={styles.container}>
-      <Header color={"#FFF6DE"} navigation={navigation} />
+      style={styles.container}
+    >
+      <Header color={"#FFF6DE"} navigation={navigation} show />
       <Text style={styles.text}>Result</Text>
 
       <Image source={require("../assets/analytics.png")} style={styles.image} />
