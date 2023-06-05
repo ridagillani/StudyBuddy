@@ -56,8 +56,22 @@ const Home = ({ navigation }) => {
             onpress1={() => navigation.navigate("Challenges")}
             onpress2={() => navigation.navigate("Challenges")}
           />
-          <Categories text1={"Flowers"} pic1={3} text2={"Fruits"} pic2={4} />
-          <Categories text1={"Vegetables"} pic1={5} text2={"Maths"} pic2={6} />
+          <Categories
+            text1={"Flowers"}
+            pic1={3}
+            text2={"Fruits"}
+            pic2={4}
+            onpress1={() => navigation.navigate("Challenges")}
+            onpress2={() => navigation.navigate("Challenges")}
+          />
+          <Categories
+            text1={"Vegetables"}
+            pic1={5}
+            text2={"Maths"}
+            pic2={6}
+            onpress1={() => navigation.navigate("Challenges")}
+            onpress2={() => navigation.navigate("Challenges")}
+          />
         </ScrollView>
       </ImageBackground>
     </View>

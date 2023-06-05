@@ -1919,15 +1919,11 @@ menu example_menu2
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
-<<<<<<< Updated upstream
-raw firebase_common_keep
-=======
 raw crow
 raw eagle
 raw firebase_common_keep
 raw pigeon
 raw sparrow
->>>>>>> Stashed changes
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

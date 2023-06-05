@@ -7,11 +7,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   TextInput,
-<<<<<<< Updated upstream
-  Alert
-=======
   Alert,
->>>>>>> Stashed changes
 } from "react-native";
 import CustomInput from "../components/CustomInput";
 import ContinueWith from "../components/ContinueWith";
@@ -37,7 +33,7 @@ export default function Signup({ navigation }) {
         navigation.navigate("Signin");
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error);
         Alert.alert("Please Fill Fields Properly");
       });
   };

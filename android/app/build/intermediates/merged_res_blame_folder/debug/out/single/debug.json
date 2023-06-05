@@ -1,16 +1,39 @@
 [
     {
-<<<<<<< Updated upstream
         "merged": "com.studybuddy.app-merged_res-33:/mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "com.studybuddy.app-main-35:/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "com.studybuddy.app-merged_res-33:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.studybuddy.app-main-35:/mipmap-xxxhdpi/ic_launcher.png"
-    },
-    {
         "merged": "com.studybuddy.app-merged_res-33:/mipmap-hdpi_ic_launcher.png.flat",
         "source": "com.studybuddy.app-main-35:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.studybuddy.app-merged_res-33:/drawable_rn_edit_text_material.xml.flat",
+        "source": "com.studybuddy.app-main-35:/drawable/rn_edit_text_material.xml"
+    },
+    {
+        "merged": "com.studybuddy.app-merged_res-33:/raw_pigeon.mp3.flat",
+        "source": "com.studybuddy.app-main-35:/raw/pigeon.mp3"
+    },
+    {
+        "merged": "com.studybuddy.app-merged_res-33:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.studybuddy.app-main-35:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.studybuddy.app-merged_res-33:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.studybuddy.app-main-35:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.studybuddy.app-merged_res-33:/raw_eagle.mp3.flat",
+        "source": "com.studybuddy.app-main-35:/raw/eagle.mp3"
+    },
+    {
+        "merged": "com.studybuddy.app-merged_res-33:/raw_crow.mp3.flat",
+        "source": "com.studybuddy.app-main-35:/raw/crow.mp3"
+    },
+    {
+        "merged": "com.studybuddy.app-merged_res-33:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.studybuddy.app-main-35:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
         "merged": "com.studybuddy.app-merged_res-33:/mipmap-mdpi_ic_launcher_round.png.flat",
@@ -21,20 +44,12 @@
         "source": "com.studybuddy.app-main-35:/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.studybuddy.app-merged_res-33:/drawable_rn_edit_text_material.xml.flat",
-        "source": "com.studybuddy.app-main-35:/drawable/rn_edit_text_material.xml"
-    },
-    {
-        "merged": "com.studybuddy.app-merged_res-33:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.studybuddy.app-main-35:/mipmap-xxhdpi/ic_launcher.png"
-    },
-    {
         "merged": "com.studybuddy.app-merged_res-33:/mipmap-mdpi_ic_launcher.png.flat",
         "source": "com.studybuddy.app-main-35:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "com.studybuddy.app-merged_res-33:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "com.studybuddy.app-main-35:/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "com.studybuddy.app-merged_res-33:/raw_sparrow.mp3.flat",
+        "source": "com.studybuddy.app-main-35:/raw/sparrow.mp3"
     },
     {
         "merged": "com.studybuddy.app-merged_res-33:/mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -43,69 +58,5 @@
     {
         "merged": "com.studybuddy.app-merged_res-33:/mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "com.studybuddy.app-main-35:/mipmap-xhdpi/ic_launcher_round.png"
-=======
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-merged_res-33:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-main-35:\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-merged_res-33:\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-main-35:\\mipmap-xhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-merged_res-33:\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-main-35:\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-merged_res-33:\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-main-35:\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "com.studybuddy.app-merged_res-33:/raw_pigeon.mp3.flat",
-        "source": "com.studybuddy.app-main-35:/raw/pigeon.mp3"
-    },
-    {
-        "merged": "com.studybuddy.app-merged_res-33:/raw_eagle.mp3.flat",
-        "source": "com.studybuddy.app-main-35:/raw/eagle.mp3"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-merged_res-33:\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-main-35:\\mipmap-hdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "com.studybuddy.app-merged_res-33:/raw_crow.mp3.flat",
-        "source": "com.studybuddy.app-main-35:/raw/crow.mp3"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-merged_res-33:\\drawable_rn_edit_text_material.xml.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-main-35:\\drawable\\rn_edit_text_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-merged_res-33:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-main-35:\\mipmap-xxxhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-merged_res-33:\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-main-35:\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-merged_res-33:\\raw_eagle.mp3.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-main-35:\\raw\\eagle.mp3"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-merged_res-33:\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-main-35:\\mipmap-mdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-merged_res-33:\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-main-35:\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "com.studybuddy.app-merged_res-33:/raw_sparrow.mp3.flat",
-        "source": "com.studybuddy.app-main-35:/raw/sparrow.mp3"
-    },
-    {
-        "merged": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-merged_res-33:\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\USER\\.gradle\\daemon\\7.5.1\\com.studybuddy.app-main-35:\\mipmap-mdpi\\ic_launcher.png"
->>>>>>> Stashed changes
     }
 ]
